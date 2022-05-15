@@ -17,6 +17,9 @@ namespace InnerSociety
         [SerializeField] private GameObject buttonPrefab;
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Sprite defaultBackground;
+        [SerializeField] private Image character1;
+        [SerializeField] private Image character2;
+        [SerializeField] private Sprite defaultCharacter;
         [SerializeField] private List<Dialogue> dialogues;
 
         private void Start()
@@ -54,6 +57,24 @@ namespace InnerSociety
             {
                 backgroundImage.sprite = defaultBackground;
             }
+
+            if (dialogueToChangeTo.Character1Sprite != null)
+            {
+                character1.sprite = dialogueToChangeTo.Character1Sprite;
+            }
+            else
+            {
+                character1.sprite = defaultCharacter;
+            }
+            
+            if (dialogueToChangeTo.Character2Sprite != null)
+            {
+                character2.sprite = dialogueToChangeTo.Character2Sprite;
+            }
+            else
+            {
+                character2.sprite = defaultCharacter;
+            }
             
         }
 
@@ -73,6 +94,11 @@ namespace InnerSociety
             {
                 Destroy(child.gameObject);
             }
+        }
+
+        public void OnBackToMenuClick()
+        {
+            SceneManager.LoadScene(Scenes.MAINMENU);
         }
 
         private void OnDialogueChangeEvent(DialogueChangeEvent ctx)

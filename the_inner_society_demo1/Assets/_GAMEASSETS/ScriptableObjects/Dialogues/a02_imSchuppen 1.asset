@@ -23,20 +23,28 @@ MonoBehaviour:
     \xDCberraschung f\xFCr dich\u201D\r\n\nBevor Bryce antworten kann, schlie\xDFt
     Neith die T\xFCr hinter sich. \r"
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
   options:
   - optionTitle: Direkt zu Neith Arbeitsplatz gehen
     newTextIdentifier: b01
-    character: 0
-    value: 0
+    sympathyChange: []
     receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []
   - optionTitle: Erst Item reparieren
     newTextIdentifier: b01
-    character: 0
-    value: 0
+    sympathyChange: []
     receivedItems:
     - {fileID: 11400000, guid: bb764c1dd936f0649bb296cafba48212, type: 2}
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []
   - optionTitle: "Zu den G\xE4rten gehen um die Karre zu reparieren"
     newTextIdentifier: a03
-    character: 0
-    value: 0
+    sympathyChange: []
     receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []

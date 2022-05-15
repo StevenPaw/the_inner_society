@@ -13,6 +13,8 @@ namespace InnerSociety
         [SerializeField] private string dialogueHeadline;
         [SerializeField] [TextArea(5, 10)] private string contentText;
         [SerializeField] private Sprite backgroundSprite;
+        [SerializeField] private Sprite character1Sprite;
+        [SerializeField] private Sprite character2Sprite;
         public List<DialogueOption> options;
 
         public string DialogueIdentifier => dialogueIdentifier;
@@ -20,5 +22,7 @@ namespace InnerSociety
         public string ContentText => contentText;
         public Sprite BackgroundSprite => backgroundSprite;
         public List<DialogueOption> Options => options;
+        public Sprite Character1Sprite => character1Sprite;
+        public Sprite Character2Sprite => character2Sprite;
     }
 }
