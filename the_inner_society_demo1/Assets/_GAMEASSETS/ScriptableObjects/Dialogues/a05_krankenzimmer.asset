@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a05_krankenzimmer
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a05
+  dialogueHeadline: Picknick
+  contentText: "Mit einer erstickten R\xF6cheln bewegte sich die gewobene Decke. 
+    \r\nNeiths Tr\xE4nen verflossen und die Trauer wurde von verwirrung ersetzt.\r\nWar
+    das einer von Bryces schlechten Witzen?\r\n\u201CBryce, wenn du glaubst das w\xE4re
+    witzig, dann schw\xF6re ich, ich-\u201D\r\nMit einem lauteren, tierischen Grollen,
+    setzte sich die Person unter der Decke auf und ergrif Neith bei seinem Hemdkragen.\r\nNein.
+    DIese Hand.. geh\xF6rte nicht Bryce.\r\nDie Decke fiel hinunter und enth\xFCllte
+    das entstellte Gesicht Leichentyp Name.\r\nBlutunterlaufende Augen mit einer
+    tiefschwarzen Iris, kaum eine Pupille sichtbar. Adern geschwollen und klarsichtbar,
+    Haut teilweise ger\xF6tet und verschwitzt, als h\xE4tte er sich stark sportlich
+    bet\xE4tigt und Muskeln die vorher noch nicht da gewesen waren. \r\n\u201CLeichentyp
+    Name\u2026?\u201D\r\nMit einer unerwartet schnellen Bewegung zog Leichentyp Name
+    Neiths Gesicht n\xE4her an seins"
+  backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
+  options:
+  - optionTitle: Warten was er tut
+    newTextIdentifier: c01
+    character: 0
+    value: 0
+    receivedItems: []
+    receivedStatusEffects:
+    - {fileID: 11400000, guid: fe6f243bbc52c884aa287f30ae1c08b4, type: 2}
+    requiredItems: []
+    usedItems: []
+  - optionTitle: "Seine Hand von deinem Kragen rei\xDFen und aus dem Raum laufen"
+    newTextIdentifier: c01
+    character: 0
+    value: 0
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []
+  - optionTitle: Mit dem Skalpell in der Hemdtasche auf sein Auge zielen
+    newTextIdentifier: d01
+    character: 0
+    value: 0
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []

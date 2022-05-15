@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a02_imSchuppen 1
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a02
+  dialogueHeadline: Im Schuppen
+  contentText: "Bryce repariert in einem h\xF6lzernen Schuppen ein Item das man in
+    einer Kolonie braucht, aber nicht zu modern ist und keinen Strom ben\xF6tigt.\r\nSein
+    fester Freund Neith \xF6ffnet die Schuppent\xFCr einen Spalt um nur seinen Kopf
+    hinein zu stecken\n\n\u201CLeichentyp Name bat mich dich zu den G\xE4rten zu
+    schicken. Eine der Karren m\xFCsste relativ schnell repariert werden. Wenn du
+    damit fertig bist, k\xF6nntest du bei mir vorbeischneien, ich hab eine kleine
+    \xDCberraschung f\xFCr dich\u201D\r\n\nBevor Bryce antworten kann, schlie\xDFt
+    Neith die T\xFCr hinter sich. \r"
+  backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
+  options:
+  - optionTitle: Direkt zu Neith Arbeitsplatz gehen
+    newTextIdentifier: b01
+    character: 0
+    value: 0
+    receivedItems: []
+  - optionTitle: Erst Item reparieren
+    newTextIdentifier: b01
+    character: 0
+    value: 0
+    receivedItems:
+    - {fileID: 11400000, guid: bb764c1dd936f0649bb296cafba48212, type: 2}
+  - optionTitle: "Zu den G\xE4rten gehen um die Karre zu reparieren"
+    newTextIdentifier: a03
+    character: 0
+    value: 0
+    receivedItems: []

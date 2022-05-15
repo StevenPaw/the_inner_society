@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace InnerSociety
 {
@@ -8,12 +7,12 @@ namespace InnerSociety
     {
         public void StartPrototype()
         {
-            //TODO: Open Scene with Prototype
+            SceneManager.LoadScene(Scenes.GAME);
         }
 
         public void OpenCredits()
         {
-            //TODO: Open Scene with Credits
+            SceneManager.LoadScene(Scenes.CREDITS);
         }
 
         public void QuitGame()

@@ -8,16 +8,17 @@ namespace InnerSociety
         [Header("Option Text")]
         public string optionTitle;
         public string newTextIdentifier;
-        [Header("Sympathy Change")]
-        public Characters character;
-        public int value;
+        [Header("Change")] 
+        public SympathyValue[] sympathyChange;
+        public Item[] receivedItems;
+        public StatusEffect[] receivedStatusEffects;
+        public Item[] requiredItems;
+        public Item[] usedItems;
 
-        public DialogueOption(string optionTitle, string newTextIdentifier, Characters character, int value)
+        public DialogueOption(string optionTitle, string newTextIdentifier)
         {
             this.optionTitle = optionTitle;
             this.newTextIdentifier = newTextIdentifier;
-            this.character = character;
-            this.value = value;
         }
     }
 }

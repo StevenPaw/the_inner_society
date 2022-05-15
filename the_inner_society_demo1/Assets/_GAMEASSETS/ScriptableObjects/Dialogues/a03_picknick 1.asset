@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a03_picknick 1
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a03
+  dialogueHeadline: Picknick
+  contentText: "Hier muss beschrieben werden wie Bryce ein bisschen mit Leichentyp
+    Name aneckt aber den Karren repariert. Danach geht er zu Neith der sich sehr
+    dar\xFCber freut, dass Bryce etwas f\xFCr seinen engen Freund getan hat und sagt
+    dass er ein Picknick f\xFCr die beiden vorbereitet hat."
+  backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: a04
+    sympathyChange:
+    - character: 2
+      sympathyValue: 1
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []

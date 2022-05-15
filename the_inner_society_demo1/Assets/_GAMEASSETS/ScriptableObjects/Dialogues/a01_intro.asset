@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a01_intro
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a01
+  dialogueHeadline: Intro
+  contentText: "Fr\xFChling 2075, 38 Jahre nach dem Ende des dritten Weltkrieges,
+    der Teile Europas und anderer Kontinente unbewohnbar gelassen hat und 27 Jahre
+    nach der Zusammenf\xFChrung und Erschaffung des Vereinigten Kanadaamerikas. \r\nBereits
+    seit 2 Jahren sind sie nun bereits in Stadtname eingesperrt. Gezwungen, gegen
+    ihren Willen. Testobjekte des unerreichbaren, freiem B\xFCndnisses Kanadaamerikas.
+    Von wegen Unantastbar. Bryce war sich sicher, dass kein Land das es f\xFCr n\xF6tig
+    hielt an den eigenen B\xFCrgern eine Waffe zu testen so unerreichbar und frei
+    sei wie es angebe. \r\nDie Kolonie der Betroffenen hatte sich mit hilfe gelegentlicher
+    Saat-, Trinkwasser- und Medizin-Lieferungen der Regierung gelernt sich in diesen
+    zwei Jahren selbst zu organisieren. Doch trotz des engen Zusammenhalts der Kolonie
+    Bewohner, da sie allein dasselbe Schicksal teilten und nur als Gruppe \xFCberlegen
+    k\xF6nnten, schien Bryce unter ihnen ein Aussenseiter."
+  backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: a02
+    character: 0
+    value: 0

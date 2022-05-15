@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a04_picknick 1
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a04
+  dialogueHeadline: Picknick
+  contentText: "Erkl\xE4ren das sie zu zweit picknicken gehen, alles super, Neith
+    hat sogar hier in der Kolonie seltenes Obst extra f\xFCr die beiden besorgt (erdbeeren
+    oder so? iwas was f\xFCr uns normal ist? oder vll auch sowas wie Kohl oder Kraut?)
+    und alles l\xE4uft gut, es wird sp\xE4t, sie schlafen auf der Decke ein, werden
+    gew\xE4ckt von Bryces Mentor, der ihnen leider mitteilen muss dass Leichentyp
+    Name letzte Nacht unerwarten am Folgen der BioWaffe der sie alle ausgesetzt waren
+    verstorben ist. Und obwohl das nun schon wieder 10 h her ist, noch niemand von
+    der Regierung kam um ihn abzutransportieren wie es \xFCblich ist. Das sei nun
+    schon die dritte Leiche, die nicht wie \xFCblich abgeholt worden w\xE4re. \r\n\r\n\r\nDen
+    Tr\xE4nen nahe betritt Neith das zum Krankenzimmer umfunktionierte Wohnzimmer
+    des alten Wohnhauses.\r\nAuch durch die gewobenen Decke  die ihn bedeckt waren
+    dennoch deutlich die Umrisse der darunter liegenden Person erkenntlich. Vorsichtig
+    schritt Neith an den Leichnahm seines enges Freundes heran. \r\nLeichentyp Name
+    war einer der ersten in der Kolonie, er hatte sie aufgebaut, gepflegt und geleitet.
+    Mit offenen Armen hatte er eine jede arme Seele, die Opfer der Regierung geworden
+    war, empfangen. Der Klo\xDF in seinem Hals wurde gr\xF6\xDFer und gr\xF6\xDFer,
+    bis seine Sicht verschwommen wurde und die Tr\xE4nen begannen seine Wangen herunter
+    zu laufen. \r\n\u201CLeichentyp Name.. Was sollen wir nur ohne dich tun? Ich-\u201D"
+  backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: a05
+    character: 0
+    value: 0
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []
