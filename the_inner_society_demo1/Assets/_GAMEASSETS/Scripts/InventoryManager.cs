@@ -10,11 +10,22 @@ namespace InnerSociety
         [SerializeField] private Transform itemHolder;
         [SerializeField] private GameObject itemPrefab;
         private List<Item> collectedItems;
+        private static InventoryManager instance;
+
+        public static InventoryManager Instance => instance;
 
         private void OnEnable()
         {
             Message<CollectItemEvent>.Add(OnCollectItemEvent);
             collectedItems = new List<Item>();
+            if (instance != null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                instance = this;
+            }
         }
         
         private void OnDisable()
@@ -43,6 +54,19 @@ namespace InnerSociety
                     ii.SetItem(i);
                 }
             }
+        }
+
+        public bool HasItem(Item searchedItem)
+        {
+            foreach (Item i in collectedItems)
+            {
+                if (i.ItemName == searchedItem.ItemName)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

@@ -151,12 +151,12 @@ MonoBehaviour:
   option:
     optionTitle: wei
     newTextIdentifier: mainmenu
-    character: 0
-    value: 0
+    sympathyChange: []
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
     usedItems: []
+  button: {fileID: 5629683646203759000}
 --- !u!1 &6844631373970231414
 GameObject:
   m_ObjectHideFlags: 0

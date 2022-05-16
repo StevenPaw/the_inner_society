@@ -26,7 +26,7 @@ MonoBehaviour:
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}
   options:
-  - optionTitle: weiter (mit Item)
+  - optionTitle: weiter...
     newTextIdentifier: a10
     sympathyChange:
     - character: 2

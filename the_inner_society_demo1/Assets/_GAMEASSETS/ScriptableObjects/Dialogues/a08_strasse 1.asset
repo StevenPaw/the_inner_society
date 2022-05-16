@@ -40,3 +40,10 @@ MonoBehaviour:
     requiredItems:
     - {fileID: 11400000, guid: bb764c1dd936f0649bb296cafba48212, type: 2}
     usedItems: []
+  - optionTitle: weiter...
+    newTextIdentifier: b02
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []

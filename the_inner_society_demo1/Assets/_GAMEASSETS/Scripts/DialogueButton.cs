@@ -1,6 +1,7 @@
 ﻿using InnerSociety.Events;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace InnerSociety
 {
@@ -8,6 +9,7 @@ namespace InnerSociety
     {
         [SerializeField] private TMP_Text text;
         [SerializeField] private DialogueOption option;
+        [SerializeField] private Button button;
 
         public DialogueOption Option
         {
@@ -17,7 +19,28 @@ namespace InnerSociety
 
         public void ReloadTexts()
         {
-            text.text = option.optionTitle;
+            bool itemsAquired = true;
+            if (option.requiredItems != null)
+            {
+                foreach (Item requiredItem in option.requiredItems)
+                {
+                    if (!InventoryManager.Instance.HasItem(requiredItem))
+                    {
+                        itemsAquired = false;
+                    }
+                }
+            }
+
+            if (itemsAquired)
+            {
+                button.interactable = true;
+                text.text = option.optionTitle;
+            }
+            else
+            {
+                button.interactable = false;
+                text.text = "(Nicht verfügbar)";
+            }
         }
 
         public void OnButtonClick()
