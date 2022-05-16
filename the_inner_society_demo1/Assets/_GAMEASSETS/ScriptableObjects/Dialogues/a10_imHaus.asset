@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a10_imHaus
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a10
+  dialogueHeadline: Im Haus
+  contentText: "Im Haus treffen sie ebenfalls auf die lokale \xC4rztin und somit
+    Neiths Chefin Alyssa Magoro. \r\nSie war eigentlich Biologin, war dennoch die
+    einzige mit einem Hintergrund, der sie ansatzweise bef\xE4higte eine \xC4rtze-\xE4hnliche
+    Rolle einzunehmen.\r\nBryce half dem immer noch unter Schock stehenden Neith
+    auf einem Ohrensessel Platz zu nehmen, bevor er sich Mateo und Alyssa zuwand:
+    \u201CSchei\xDFe, was ist hier los?\u201D\r\nAlyssa senkte ihre Blick, sichtlich
+    nerv\xF6s rieb sie ihre Daumen aneinander, bevor sie wie in Gedanken verloren
+    antwortete: \u201CIch glaube von der Waffe betroffene - was ja nun alle von uns
+    betrifft - sterben fr\xFCher oder sp\xE4ter an den Folgen eines Viruses. Nach
+    dem Tod scheinen die Leichen zu\u2026 mutieren\u201D \r\nNiemand wusste so richtig
+    wie man auf eine solche Nachricht, auch wenn es sich nur um eine Vermutung handelte,
+    reagieren sollte. Die Folgen hatten sie ja mit eigenen Augen gesehen. Nia und
+    Pierre waren definitiv nicht Nia und Pierre wie sie sie kannten. \r\n\u201CGut,
+    wir k\xF6nnten aber auch noch 5 Jahre leben, einige sind innerhalb von Wochen
+    gestorben, nachdem sie der Waffe ausgesetzt waren, also sollten wir von diesen
+    Dingern wegkommen. Die Regierung ist schuld, dass wir hier sind und sie haben
+    die Leichen nicht abtransportiert. Wir sollten uns an die Mauer begeben und sie
+    zur Rede stellen. Vielleicht endlich mal versuchen in die Mauer rein zu kommen.
+    Ich sag das ja nicht schon seit Jahren.\u201D, Bryces Ton war sein Missfallen
+    anzuh\xF6ren. Er war schon lange der Einzige, der wiederholt vorgeschlagen hatte
+    zu versuchen aus der Stadt zu entkommen. \r\n\u201CWir k\xF6nnen die Anderen
+    nicht einfach hier zur\xFCcklassen. Das ist unser Zuhause, unsere Familie, wir
+    m\xFCssen einfach... irgendwie gegen diese Mutanten vorgehen und dann wird schon
+    wieder alles wie vorher!\u201D, Neith sah die Sache grunds\xE4tzlich aus einem
+    anderen Winkel als sein Partner und schien sehr \xFCberzeugt von seinem Vorschlag."
+  backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
+  options:
+  - optionTitle: Bleiben
+    newTextIdentifier: e01
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []
+  - optionTitle: Gehen
+    newTextIdentifier: f01
+    sympathyChange:
+    - character: 2
+      sympathyValue: -1
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []

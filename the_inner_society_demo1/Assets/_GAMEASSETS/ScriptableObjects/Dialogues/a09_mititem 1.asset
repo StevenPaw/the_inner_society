@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a09_mititem 1
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a09
+  dialogueHeadline: "Auf der Stra\xDFe"
+  contentText: "Mit einem dumpfen Ger\xE4usch und einem w\xFCtenden Zischen von Nia
+    kollidierte ein  Item das man in einer Kolonie braucht, aber nicht zu modern
+    ist und keinen Strom ben\xF6tigt mit ihrem Kopf. Der Schwung, mit welchem Bryce
+    es auf sie geschleudert hatte, warf sie zu Boden. Kurz zuckte sie, bevor sie
+    begann sich wieder aufzurichten. Bryce eilte aus dem Hauseingang, zog Neith auf
+    seine Beine und rannte mit ihm zur\xFCck in die heruntergekommene Wohnung. Bryces
+    Mentor Mateo schlug die T\xFCr hinter ihnen zu und schob mit M\xFChe und unter
+    St\xF6hnen einen schweren Schrank vor den Eingang."
+  backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
+  options:
+  - optionTitle: weiter (mit Item)
+    newTextIdentifier: a10
+    sympathyChange:
+    - character: 2
+      sympathyValue: 1
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []

@@ -14,30 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: a04
   dialogueHeadline: Picknick
-  contentText: "Erkl\xE4ren das sie zu zweit picknicken gehen, alles super, Neith
-    hat sogar hier in der Kolonie seltenes Obst extra f\xFCr die beiden besorgt (erdbeeren
-    oder so? iwas was f\xFCr uns normal ist? oder vll auch sowas wie Kohl oder Kraut?)
-    und alles l\xE4uft gut, es wird sp\xE4t, sie schlafen auf der Decke ein, werden
-    gew\xE4ckt von Bryces Mentor, der ihnen leider mitteilen muss dass Leichentyp
-    Name letzte Nacht unerwarten am Folgen der BioWaffe der sie alle ausgesetzt waren
-    verstorben ist. Und obwohl das nun schon wieder 10 h her ist, noch niemand von
-    der Regierung kam um ihn abzutransportieren wie es \xFCblich ist. Das sei nun
-    schon die dritte Leiche, die nicht wie \xFCblich abgeholt worden w\xE4re. \r\n\r\n\r\nDen
-    Tr\xE4nen nahe betritt Neith das zum Krankenzimmer umfunktionierte Wohnzimmer
-    des alten Wohnhauses.\r\nAuch durch die gewobenen Decke  die ihn bedeckt waren
-    dennoch deutlich die Umrisse der darunter liegenden Person erkenntlich. Vorsichtig
-    schritt Neith an den Leichnahm seines enges Freundes heran. \r\nLeichentyp Name
-    war einer der ersten in der Kolonie, er hatte sie aufgebaut, gepflegt und geleitet.
-    Mit offenen Armen hatte er eine jede arme Seele, die Opfer der Regierung geworden
-    war, empfangen. Der Klo\xDF in seinem Hals wurde gr\xF6\xDFer und gr\xF6\xDFer,
-    bis seine Sicht verschwommen wurde und die Tr\xE4nen begannen seine Wangen herunter
-    zu laufen. \r\n\u201CLeichentyp Name.. Was sollen wir nur ohne dich tun? Ich-\u201D"
+  contentText: "Das alte Haus in welchem Neith arbeite war halbherzig zu einer Arztpraxis
+    umgebaut worden. Das rote, verschmierte graffiti Kreuz \xFCber der h\xF6lzernen
+    Eingangst\xFCr wirkte mehr wie eine Warnung als ein Hinweis auf \xE4rztliche
+    Versorgung. Ohne ein Klopfen betrat er die Praxis und l\xE4chelte Neith entgegen,
+    der hinter einem Esstisch handgeschriebene Unterlagen sortierte. Die Praxiseinrichtung
+    war aus allt\xE4glichen M\xF6beln zusammengew\xFCrfelt worden. Der Esstisch und
+    eine Ablage galten als Empfang und Datenablage, unterschiedliche St\xFChle und
+    Sessel als Wartebereich und das offene Wohnzimmer des Hauses war mit ein paar
+    Betten und Tischen zu einem Behandlungsraum umgestaltet worden. \r\n\u201CHey!
+    Konntest du den Karren reparieren?\u201D \r\n\u201CJap. Nichts besonderes, erz\xE4hl
+    mir lieber was f\xFCr eine \xDCberraschung du f\xFCr mich vorbereitet hast!\u201D\r\nNeith
+    verdrehte sarkastisch die Augen: \u201CEin Picknick. Hol mich nach meiner Schicht
+    ab und wir gehen ans Westende. Ich habe schon alles vorbereitet. Bis sp\xE4ter\u201D\n"
   backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
   options:
   - optionTitle: weiter...
     newTextIdentifier: a05
-    character: 0
-    value: 0
+    sympathyChange: []
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a05_morgen
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a05
+  dialogueHeadline: Kleinstadt
+  contentText: "Am fr\xFChen Abend wartete Bryce vor der Praxis auf das Schichtende
+    seines Freundes und strahlte ihm entgegen als er endlich mit einer gro\xDFen
+    Umh\xE4ngetasche \xFCber der Schulter und einem Korb in der Hand das Haus verlie\xDF.
+    Schnell dr\xFCckte er den Korb in Bryces Hand und ging die Stra\xDFe hinunter
+    Richtung Westende der Stadt. \r\nDie kleine Kolonie besiedelte nicht die gesamte
+    Kleinstadt. Viele der H\xE4user standen leer - wurden nicht einmal f\xFCr andere
+    Zwecke genutzt. Um sich an einem Ort zu b\xFCndeln erstreckte sich ihr Wohnraum
+    \xFCber den nord\xF6stlichen Teil der Stadt. Der Westen war also nicht komplett
+    sich selbst \xFCberlassen, da er doch grob von ihnen gepflegt wurde, aber deutlich
+    verlassener und privater. Die Natur hatte einige der Vorg\xE4rten zur\xFCck gefordert,
+    doch andere waren perfekt um auf ihnen eine Decke auszubreiten und ein Picknick
+    zu genie\xDFen. \r\nUnd genau dies taten sie. Neith hatte sich sehr angestrengt
+    und viel vorbereitet. Er hatte sogar zwei seltenes Essen besorgen k\xF6nnten
+    um sie gemeinsam zu geniessen, dieses OBST/GEM\xDCSE war besonders selten in
+    der Kolonie und es gab nur wenige.\r\nDie Zeit verstrich schnell und der warme
+    sp\xE4t Fr\xFChlingsabend neigte sich dem Ende. Als der Mond bereits hoch am
+    Himmel stand, lagen sie immer noch gemeinsam auf der gebl\xFCmten Decke und schauten
+    in die Sterne. Nacheinander verfielen sie dem Schlaf.\r\n\r\nUnsanft wurden sie
+    geweckt. Eine raue, tiefe Stimme holte sie aus dem Schlaf, \u201CHier steckt
+    hier\u201D Nach der \xFCblichen Verwirrung nach dem Aufwachen blickte Bryce sich
+    um und st\xF6hnte auf, als er seinen Mentor hinter den beiden stehen sah. Seine
+    H\xE4nde waren in die H\xFCften gestemmt und sein Blick sah bedr\xFCckt aus,
+    wie immer. \r\n\u201CGuten Morgen, Mateo\u201D, gr\xFC\xDFte ihn Neith mit einem
+    sing-sang Tonfall, doch Bryce sah seinem Mentor direkt an, dass etwas in seinen
+    Augen anders war. Es war ernst. \r\n\u201CWas ist los? Du guckst doch bestimmt
+    nicht nur so, weil ich verschlafen habe\u201D, Bryce erhob sich von der Decke
+    und klopfte seine Hosen ab, bevor er Neith vom ausgek\xFChlten Boden half.\r\nMateo
+    wandte sich Neith zu, den Blick gesenkt und Bryce wusste, dass es nichts Gutes
+    hie\xDF: \u201CBei Pierre ist gestern abend der Virus ausgebrochen.. Er ist heute
+    morgen an den Folgen verstorben\u2026 Es tut mir leid.\u201D \r\n\r\nNach dem
+    ersten Schock konnte Neith sich gl\xFCcklicherweise wieder fassen und ein paar
+    Fragen stellen. Bryce war an seiner Seite und tr\xF6stete ihn mit einem Arm um
+    seine Schulter. Neith entschied, dass er sich allein von seinem Freund verabschieden
+    wollte und eilte zur Praxis, in der Hoffnung sein Freund sei noch nicht abtransportiert
+    worden.\r\nBryce wandte sich Mateo zu, bevor er Neith folgen und mit einem warmen
+    Tee auf ihn zuhause warten wollte, doch sein Mentor hielt ihn auf. \u201CIch
+    denke nicht, dass sie ihn abtransportieren werden\u2026 Aus irgendwelchen Gr\xFCnden
+    ist er nicht der einzige Todesfall, den sie nicht abgeholt haben. Wenn sie die
+    Toten nicht weiterhin wie eigentlich \xFCblich hier rausholen, m\xFCssen wir
+    uns eventuell selbst \xFCberlegen was wir mit ihnen machen. Die Stadt ist zu
+    klein, um sie zu vergraben\u2026\u201D \r\nBryce wirkte nicht \xFCberrascht \xFCber
+    diese Entwicklung: \u201CDie Tode h\xE4ufen sich. Vielleicht lagen wir falsch
+    und der Virus durch die Waffe braucht ein paar Jahre, um uns alle zu t\xF6ten.
+    Die Regierung hat das eingesehen und \xFCberl\xE4sst uns jetzt uns selbst!\u201D"
+  backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
+  options:
+  - optionTitle: weiter....
+    newTextIdentifier: a06
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    usedItems: []
