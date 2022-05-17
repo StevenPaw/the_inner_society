@@ -13,6 +13,7 @@ namespace InnerSociety
         public Item[] receivedItems;
         public StatusEffect[] receivedStatusEffects;
         public Item[] requiredItems;
+        public Item[] forbiddenItems;
         public Item[] usedItems;
 
         public DialogueOption(string optionTitle, string newTextIdentifier)

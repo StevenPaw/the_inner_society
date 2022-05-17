@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
-  m_Name: a10_imHaus
+  m_Name: a10
   m_EditorClassIdentifier: 
   dialogueIdentifier: a10
   dialogueHeadline: Im Haus
@@ -40,15 +40,18 @@ MonoBehaviour:
     wieder alles wie vorher!\u201D, Neith sah die Sache grunds\xE4tzlich aus einem
     anderen Winkel als sein Partner und schien sehr \xFCberzeugt von seinem Vorschlag."
   backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
-  character1Sprite: {fileID: 0}
-  character2Sprite: {fileID: 0}
+  character1Sprite: {fileID: 21300000, guid: 40b99a925cf2fd44abc366c87f028078, type: 3}
+  character2Sprite: {fileID: 21300000, guid: e115c13f0d2444843b7bff93c0c2423d, type: 3}
   options:
   - optionTitle: Bleiben
     newTextIdentifier: e01
-    sympathyChange: []
+    sympathyChange:
+    - character: 2
+      sympathyValue: 1
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []
   - optionTitle: Gehen
     newTextIdentifier: f01
@@ -58,4 +61,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

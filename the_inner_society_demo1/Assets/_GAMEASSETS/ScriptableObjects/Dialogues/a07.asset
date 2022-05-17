@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
-  m_Name: a07_krankenzimmer 1
+  m_Name: a07
   m_EditorClassIdentifier: 
   dialogueIdentifier: a07
   dialogueHeadline: Krankenzimmer
@@ -36,6 +36,7 @@ MonoBehaviour:
     receivedStatusEffects:
     - {fileID: 11400000, guid: fe6f243bbc52c884aa287f30ae1c08b4, type: 2}
     requiredItems: []
+    forbiddenItems: []
     usedItems: []
   - optionTitle: "Seine Hand von deinem Kragen rei\xDFen und aus dem Raum laufen"
     newTextIdentifier: c01
@@ -43,11 +44,14 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []
   - optionTitle: Mit dem Skalpell in der Hemdtasche auf sein Auge zielen
     newTextIdentifier: d01
     sympathyChange: []
-    receivedItems: []
+    receivedItems:
+    - {fileID: 11400000, guid: 54697ae7f4e796143b780b0d88f705cd, type: 2}
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

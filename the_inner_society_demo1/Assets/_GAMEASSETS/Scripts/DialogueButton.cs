@@ -29,6 +29,14 @@ namespace InnerSociety
                         itemsAquired = false;
                     }
                 }
+                
+                foreach (Item forbiddenItem in option.forbiddenItems)
+                {
+                    if (InventoryManager.Instance.HasItem(forbiddenItem))
+                    {
+                        itemsAquired = false;
+                    }
+                }
             }
 
             if (itemsAquired)

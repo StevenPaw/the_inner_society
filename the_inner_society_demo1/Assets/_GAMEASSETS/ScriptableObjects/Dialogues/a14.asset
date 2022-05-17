@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a14
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a14
+  dialogueHeadline: Quicktime Events
+  contentText: "Die Mauer schien mehrere Meter breit zu sein. Bryce und Neith befanden
+    sich nicht auf der anderen Seite der Mauern sondern innerhalb der Mauer. Hier
+    schienen mehrere G\xE4nge und R\xE4ume zu existieren. Sie investierten einen
+    dieser R\xE4ume und stellen fest, dass es sich hierbei um einen \xDCberwachungsraum
+    handelte. Den \u201CExit\u201D-Schildern folgendend versuchen sie einen Ausgang
+    zu finden. \r\nHierbei werden sie auch innerhalb der Mauer von einer mutierten
+    Person \xFCberrascht und m\xFCssen den Korridor hinunter fliehen.\r\nUm Gegenst\xE4nden
+    und Angriffen auszuweichen, werden hier Quicktime Events getriggert werden."
+  backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
+  options:
+  - optionTitle: Ich schaffe die Events
+    newTextIdentifier: a15
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []
+  - optionTitle: Ich schaffe die Events nicht
+    newTextIdentifier: b04
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []

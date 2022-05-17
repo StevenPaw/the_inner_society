@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a18
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a18
+  dialogueHeadline: In den Hallen
+  contentText: "Sie befinden sich in steril wirkenden Hallen, die eindeutig darauf
+    schlie\xDFen lassen, dass es sich hier um eine Forschungseinrichtung handelt.\r\nModerne
+    T\xFCren f\xFChren weiter hinein. Hinter einer liegt eindeutig ein Laboratorium
+    mit einem eingeschalteten Rechner, doch die gl\xE4serne T\xFCr ist verschlossen.
+    \r\nAuf einer Anrichte am Ende des Raumes befindet sich aber ebenfalls ein Autoschl\xFCssel
+    f\xFCr eines der Autos, welches durch eines der gro\xDFen Fenster zu sehen ist."
+  backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
+  options:
+  - optionTitle: "Versuchen durch die T\xFCr in das Laboratorium zu gelangen"
+    newTextIdentifier: g01
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []
+  - optionTitle: Mit dem Auto zu fliehen versuchen
+    newTextIdentifier: h01
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []

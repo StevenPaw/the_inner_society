@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: a13
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: a13
+  dialogueHeadline: "Auf der Stra\xDFe"
+  contentText: "Als nur noch offenes Feld vor ihnen war, sahen sie, dass das Tor
+    sich weder \xF6ffnete, noch schloss, sondern fest zu stecken schien. \r\nUngef\xE4hr
+    zwei Meter \xFCber dem Boden war noch ein Spalt zum inneren der Mauer, doch etwas
+    schien eine weitere Bewegung zu blockieren. \r\nEs bewegte sich leicht auf und
+    wieder abw\xE4rts, doch die L\xFCcke schien weder gr\xF6\xDFer, noch kleiner
+    zu werden. \r\nLangsam ausser Puste, verfielen sie in einen schnellen Schritt.
+    \r\n\u201CLasst mich zuerst, ich pr\xFCfe ob alles klar ist drinnen.\u201D, wies
+    Mateo bestimmend an. \r\nDoch als das Tor nur noch wenige Meter entfernt war,
+    schien die Blockierung sich zu l\xF6sen und langsam aber sicher schloss sich
+    das Eisentor. \r\n\u201CNein, Nein, NEIN!\u201D, panisch brachen sie wieder in
+    einen Sprint aus, doch Mateo war weder der j\xFCngste, noch der Fitteste und
+    kam bei weitem nicht so gut hinterher. \r\nBryce blickte seinen Freund entschieden
+    an und Neith wusste, was er ihm sagen wollte. \r\nNeith z\xF6gerte, kam dann
+    aber doch der bitte seines Freundes nach und rutschte ohne abzubremsen unter
+    dem Tor hindurch. Bryce bremste ab und sah sich angespannt zu dem Rest seiner
+    Gruppe um. \r\nMittlerweile war das Tor nur noch einen Meter \xFCber dem Boden
+    und schloss sich schneller als erwartet. \r\n\u201CGEH DURCH. WORAUF WARTEST
+    DU! ES GIBT NOCH EINEN ANDEREN WEG, WIR FINDEN WIEDER ZUSAMMEN!\u201D, rief Mateo
+    ihm w\xFCtend entgegen. \r\nBryce war sich ziemlich sicher, dass das eine L\xFCge
+    war, aber Neith war bereits auf der anderen Seite und er w\xFCrde ihn unter keinen
+    Umst\xE4nden alleine lassen, also nickte er seinem Mentor zu, viel auf die Knie
+    und rollte sich unter dem Tor hindurch."
+  backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
+  character1Sprite: {fileID: 21300000, guid: 40b99a925cf2fd44abc366c87f028078, type: 3}
+  character2Sprite: {fileID: 21300000, guid: e28bd1f81843a84459620803d9cac930, type: 3}
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: a14
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []

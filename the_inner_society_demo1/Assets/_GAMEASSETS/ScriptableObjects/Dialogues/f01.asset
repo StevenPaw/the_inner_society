@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: f01
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: f01
+  dialogueHeadline: Am Bett
+  contentText: "\u201CNeith, unsere Chancen sehen nicht gut aus!\u201D, gab Bryce
+    zu bedenken. Das schien wohl genau das Gegenteil zu sein, von dem was sein Partner
+    in so einer Situation h\xF6ren wollte. Seinem Blick zu entnehmen w\xFCrde dies
+    schnell in eine Diskussion ausarten, doch gl\xFCcklicherweise schien Mateo es
+    \xE4hnlich zu sehen wie Bryce: \u201CJunge, ich weiss, dass dir die anderen wichtig
+    sind. Aber er hat Recht. Am besten helfen wir, in dem wir am Leben bleiben und
+    versuchen aktiv etwas zu tun. Und unser einziger Anhaltspunkt ist die Mauer\u201D\r\nDie
+    Luft schien geladen, die Spannung zwischen ihnen quasi greifbar, doch sie verschwand
+    mit einem besiegten Seufzer von Neith. Langsam erhob er sich und stimmte der
+    Idee zu."
+  backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
+  character1Sprite: {fileID: 21300000, guid: e28bd1f81843a84459620803d9cac930, type: 3}
+  character2Sprite: {fileID: 21300000, guid: 40b99a925cf2fd44abc366c87f028078, type: 3}
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: a19
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []
