@@ -14,14 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: a02
   dialogueHeadline: Im Schuppen
-  contentText: "Bryce repariert in einem h\xF6lzernen Schuppen ein Item das man in
-    einer Kolonie braucht, aber nicht zu modern ist und keinen Strom ben\xF6tigt.\r\nSein
-    fester Freund Neith \xF6ffnet die Schuppent\xFCr einen Spalt um nur seinen Kopf
-    hinein zu stecken\n\n\u201CLeichentyp Name bat mich dich zu den G\xE4rten zu
-    schicken. Eine der Karren m\xFCsste relativ schnell repariert werden. Wenn du
-    damit fertig bist, k\xF6nntest du bei mir vorbeischneien, ich hab eine kleine
-    \xDCberraschung f\xFCr dich\u201D\r\n\nBevor Bryce antworten kann, schlie\xDFt
-    Neith die T\xFCr hinter sich. \r"
+  contentText: "Bryce reparierte in einem h\xF6lzernen Schuppen ein Rohrsystem f\xFCr
+    die automatische Bew\xE4sserung von G\xE4rtner durch Regen.\r\nSein fester Freund
+    Neith \xF6ffnete die Schuppent\xFCr einen Spalt um nur seinen Kopf hinein zu
+    stecken.\r\n\u201CPierre bat mich, dich zu den G\xE4rten zu schicken. Eine der
+    Karren m\xFCsste relativ schnell repariert werden. Wenn du damit fertig bist,
+    k\xF6nntest du bei mir vorbeischneien, ich hab eine kleine \xDCberraschung f\xFCr
+    dich\u201D\r\nBevor Bryce antworten konnte, schloss Neith die T\xFCr hinter sich.\r"
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}
@@ -32,6 +31,7 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []
   - optionTitle: Erst Item reparieren
     newTextIdentifier: b01
@@ -40,6 +40,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: bb764c1dd936f0649bb296cafba48212, type: 2}
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []
   - optionTitle: "Zu den G\xE4rten gehen um die Karre zu reparieren"
     newTextIdentifier: a03
@@ -47,4 +48,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

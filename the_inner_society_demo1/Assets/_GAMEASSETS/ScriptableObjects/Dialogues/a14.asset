@@ -16,10 +16,10 @@ MonoBehaviour:
   dialogueHeadline: Quicktime Events
   contentText: "Die Mauer schien mehrere Meter breit zu sein. Bryce und Neith befanden
     sich nicht auf der anderen Seite der Mauern sondern innerhalb der Mauer. Hier
-    schienen mehrere G\xE4nge und R\xE4ume zu existieren. Sie investierten einen
+    schienen mehrere G\xE4nge und R\xE4ume zu existieren. Sie inspizierten einen
     dieser R\xE4ume und stellen fest, dass es sich hierbei um einen \xDCberwachungsraum
-    handelte. Den \u201CExit\u201D-Schildern folgendend versuchen sie einen Ausgang
-    zu finden. \r\nHierbei werden sie auch innerhalb der Mauer von einer mutierten
+    handelte. Den \u201CExit\u201D-Schildern folgend versuchten sie einen Ausgang
+    zu finden.\r\nHierbei werden sie auch innerhalb der Mauer von einer mutierten
     Person \xFCberrascht und m\xFCssen den Korridor hinunter fliehen.\r\nUm Gegenst\xE4nden
     und Angriffen auszuweichen, werden hier Quicktime Events getriggert werden."
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}

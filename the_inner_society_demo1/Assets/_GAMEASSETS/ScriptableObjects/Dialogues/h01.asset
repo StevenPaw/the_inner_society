@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: h01
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: h01
+  dialogueHeadline: Laboratiorium
+  contentText: "Bryce und Neith untersuchten die offenen Spinde und konnten in einem
+    Rucksack die passenden Autoschl\xFCssel zu dem Wagen, welchen sie auf dem Hof
+    stehen sahen, finden. Bryce nahm sie an sich und dr\xE4ngte Neith dazu mit dem
+    Wagen zu fliehen. \r\nGemeinsam machten sie sich auf den Weg zu dem Wagen. Sicher
+    im Inneren des Mehrsitzers angekommen begann die Diskussion wo sie \xFCberhaupt
+    hin sollten. \r\nSie wussten weder wo genau im Land sie sich befanden, noch wie
+    sie die n\xE4chste Zivilisation finden sollten. \r\nDoch als sie sich darauf
+    einigten erst einmal zu verschwinden, heulte das Auto einmal laut auf, bevor
+    der Motor versagte. Auch nach mehrmaligem verzweifelten Versuchen bekam Bryce
+    diesen nicht wieder zum Laufen. \r\nAussichtslos und ver\xE4ngstigt durch den
+    L\xE4rm ungewollte \u201CPersonen\u201D anzulocken, begaben sie sich in das innere
+    der Forschungseinheit zur\xFCck."
+  backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: g01
+    sympathyChange:
+    - character: 2
+      sympathyValue: -1
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []

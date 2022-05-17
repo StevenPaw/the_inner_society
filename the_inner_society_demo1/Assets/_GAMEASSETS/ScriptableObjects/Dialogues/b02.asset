@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueIdentifier: b02
   dialogueHeadline: "Auf der Stra\xDFe"
   contentText: "Bryces Mentor Mateo st\xFCrmte aus dem Hauseingang. In der Bewegung
-    griff er nach einer alten Eisenstange die neben dem Treppenaufgang gestanden
+    griff er nach einer alten Eisenstange, die neben dem Treppenaufgang gestanden
     hatte und zielte auf Nia.\r\nMateo holte aus und schlug nach ihrem Oberk\xF6rper,
     in der Hoffnung sie zur\xFCck zu dr\xE4ngen, doch entgegen aller Erwartungen,
     duckte sie sich mit Leichtigkeit unter der Stange hinweg. \r\nBryce eilte aus
@@ -24,7 +24,8 @@ MonoBehaviour:
     seinem Mentor, der Nia nicht mit einem seiner Schl\xE4ge hatte treffen oder gar
     zum Stolpern bringen k\xF6nnen. In einem letzten verzweifelten Versuch warf Mateo
     die Stange nach ihr und nutzte die Ablenkung, um hinter ihnen in das Haus zu
-    eilen. Gemeinsam schoben sie unter St\xF6hnen einen schwerenSchrank vor den Eingang."
+    eilen. Gemeinsam schoben sie unter St\xF6hnen einen schweren Schrank vor den
+    Eingang."
   backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}
@@ -35,4 +36,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

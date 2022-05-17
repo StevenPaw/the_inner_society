@@ -14,8 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: a19
   dialogueHeadline: Picknick
-  contentText: "Chapter 1 ENDE\nDanke f\xFCrs testen!"
+  contentText: "Sie gelangten in das Labor in welchem sie erfuhren, dass es auch
+    bei allen zuvor abtransportieren Leichen zu einem Mutanten-Ausbruch gekommen
+    war. Diese konnten nicht vern\xFCnftig kontrolliert werden und dies folgte schlussendlich
+    zu einer Verbreitung der Mutation. Infizierte w\xFCrden nach ihrem Tod mutieren
+    und dann beginnen, Menschen angreifen. Mutationen hatten scheinbar mitunter identische
+    Merkmale, unterschieden sich jedoch auch in den F\xE4higkeiten, die sie Infizierten
+    gaben. \r\nNeben diesen vernichtenden Nachrichten fanden sie ebenfalls die Zugangsdaten
+    und den Eingang zu einer Magnet Eisenbahn, welche sie zu einem weiteren Teil
+    der Forschungseinrichtung transportieren w\xFCrde."
   backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}
-  options: []
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: a20
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []

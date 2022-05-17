@@ -14,16 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: b04
   dialogueHeadline: Quicktime Events
-  contentText: "Bryce kann knapp allen Angriffen des Mutanten ausweichen. Um eine
-    S\xE4ule herumtanzend, bringt er Neith genug Zeit ein um in den n\xE4chsten Raum
-    zu gelangen. Mit einem rufen macht dieser ihn darauf aufmerksam, dass sich die
-    schwere T\xFCr automatisch schlie\xDFen l\xE4sst. Die kurze Ablenkung ist genug
-    um den Mutanten Zeit zu geben, seine Z\xE4hne in Bryces Hand zu vergraben. Mit
-    einem Aufschrei zuckt diese zusammen, ballte seine andere Hand zu einer Faust
-    und schlug dem Mutanten in sein deformiertes Gesicht. Dieser zischte auf und
-    liess von Bryces Hand ab. Bevor der Mutant noch einmal zubeissen konnte sprintete
-    Bryce der sich schlie\xDFenden T\xFCr entgegen. Knapp gelangt er auf die andere
-    Seite, bevor beide den Aufprall des Mutanten-K\xF6rpers gegen das metall wahrnehmen."
+  contentText: "Bryce konnte knapp allen Angriffen des Mutanten ausweichen. Um eine
+    S\xE4ule herumtanzend, brachte er Neith genug Zeit ein, um in den n\xE4chsten
+    Raum zu gelangen. Mit einem Rufen machte dieser ihn darauf aufmerksam, dass sich
+    die schwere T\xFCr automatisch schlie\xDFen lie\xDF. Die kurze Ablenkung war
+    genug, um den Mutanten Zeit zu geben, seine Z\xE4hne in Bryces Hand zu vergraben.
+    Mit einem Aufschrei zuckte dieser zusammen, ballte seine andere Hand zu einer
+    Faust und schlug dem Mutanten in sein deformiertes Gesicht. Dieser zischte auf
+    und lie\xDF von Bryces Hand ab. Bevor der Mutant noch einmal zubei\xDFen konnte,
+    sprintete Bryce der sich schlie\xDFenden T\xFCr entgegen. Knapp gelangte er auf
+    die andere Seite, bevor beide den Aufprall des Mutanten-K\xF6rpers gegen das
+    Metall wahrnahmen."
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}

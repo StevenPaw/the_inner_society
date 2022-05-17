@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232964d29fe84b008da47f9f04c8f681, type: 3}
+  m_Name: z01
+  m_EditorClassIdentifier: 
+  dialogueIdentifier: z01
+  dialogueHeadline: In den Hallen
+  contentText: "Doch bevor sie eine Entscheidung treffen konnten, wurden sie von
+    dem Ger\xE4usch einer sich \xF6ffnenden T\xFCr \xFCberrascht. Neith blieb unter
+    Schock wie angewurzelt stehen, er wagte es nicht sich umzudrehen, um Gewissheit
+    zu erhalten wer oder was den Raum hinter ihnen betreten hatte. Es musste der
+    Mutant sein, der sie zuvor durch die Mauern gejagt hatte. Wer sonst?\r\n\r\nDem
+    erleichterten Ausatmen Bryces konnte er entnehmen, dass dies nicht der Fall gewesen
+    sein konnte und verwundert wandte nun auch Neith sich um. \r\nHinter ihnen stand
+    Mateo. Au\xDFer Atem, dreckig und verschwitzt, aber unversehrt und lebendig.
+    Der sonst so gefasste Bryce fiel seinem Mentor beruhigt um den Hals: \u201CGott
+    sei Dank. Dir geht es gut!\u201D\r\nMateo klopfte ihm beruhigend auf den R\xFCcken:
+    \u201CDank euch! Ihr habt das Tor ge\xF6ffnet oder nich\xB4?\u201D\r\nSie setzten
+    Mateo ins Bilde, bevor sie ihr weiteres Vorgehen entschieden."
+  backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
+  character1Sprite: {fileID: 0}
+  character2Sprite: {fileID: 0}
+  options:
+  - optionTitle: weiter...
+    newTextIdentifier: z02
+    sympathyChange: []
+    receivedItems: []
+    receivedStatusEffects: []
+    requiredItems: []
+    forbiddenItems: []
+    usedItems: []

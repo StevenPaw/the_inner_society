@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: a16
   dialogueHeadline: Ausgang aus der Mauer
-  contentText: "Der Ausgang aus der Mauer befindet sich offensichtlich hinter der
-    gro\xDFen Doppelt\xFCr geradeaus. Allerdings ist durch mehrere Schilder ersichtlich,
-    dass es zu ihrer linken einen weiteren Kontrollraum gibt, der weitere Informationen
-    bringen k\xF6nnte. Die Zeit ist allerdings knapp, da der Mutant ihnen immer noch
-    auf den Fersen zu sein scheint und die T\xFCr so langsam nachzugeben scheint."
+  contentText: "Der Ausgang aus der Mauer befand sich offenbar hinter der gro\xDFen
+    Doppelt\xFCr geradeaus. Allerdings wurde durch mehrere Schilder ersichtlich,
+    dass es zu ihrer Linken einen weiteren Kontrollraum gab, der weitere Informationen
+    bringen k\xF6nnte. Die Zeit war allerdings knapp, da der Mutant ihnen immer noch
+    auf den Fersen zu sein schien und die T\xFCr so langsam nachzugeben schien."
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}

@@ -17,23 +17,23 @@ MonoBehaviour:
   contentText: "Bryce legte sein Werkzeug aus der Hand und eilte seinem Freund hinterher.
     Neith schien schnellen Schrittes zu seinem Arbeitsplatz geeilt zu sein, denn
     als Bryce seine Werkstatt verlie\xDF, war der lange Wendehammer, an dessen Ende
-    sein Arbeitsplatz sich befand, menschenleer. Da er ihn nun sowieso schon verpasst
+    sein Arbeitsplatz sich befand, menschenleer. Da er Neith nun sowieso schon verpasst
     hatte, ging Bryce in einer entspannten Geschwindigkeit in Richtung des umgebauten
-    Reihenhauses 5 Stra\xDFen weiter. Das alte Haus war halbherzig zu einer Arztpraxis
-    umgebaut worden. Das rote, verschmierte Graffiti-Kreuz \xFCber der h\xF6lzernen
-    Eingangst\xFCr wirkte mehr wie eine Warnung als ein Hinweis auf \xE4rztliche
-    Versorgung. Ohne ein Klopfen betrat er die Praxis und l\xE4chelte Neith entgegen,
-    der hinter einem Esstisch handgeschriebene Unterlagen sortierte. Die Praxiseinrichtung
-    war aus allt\xE4glichen M\xF6beln zusammengew\xFCrfelt worden. Der Esstisch und
-    eine Ablage galten als Empfang und Datenablage, unterschiedliche St\xFChle und
-    Sessel als Wartebereich und das offene Wohnzimmer des Hauses war mit ein paar
-    Betten und Tischen zu einem Behandlungsraum umgestaltet worden. \r\n\u201CDu
-    warst nicht bei Pierre und hast ihm mit dem Karren geholfen? Obwohl ich dich
-    darum gebeten habe?\u201D (Minus Sympathie)\r\n\u201CEs ist ein Karren.. Wie
-    wichtig kann es gewesen sein? Erz\xE4hl mir vielmehr was f\xFCr eine \xDCberraschung
-    du f\xFCr mich vorbereitet hast!\u201D\r\n\u201CBryce - Pierre ist mein bester
-    Freund. Es w\xFCrde mich freuen, wenn du wenigstens versuchen w\xFCrdest dich
-    gut mit ihm zu stellen..\u201D - \u201CWas ist die \xDCberraschung?\u201D\r\nNeith
+    Reihenhauses f\xFCnf Stra\xDFen weiter. Das alte Haus war halbherzig zu einer
+    Arztpraxis umgebaut worden. Das rote, verschmierte Graffiti-Kreuz \xFCber der
+    h\xF6lzernen Eingangst\xFCr wirkte mehr wie eine Warnung als ein Hinweis auf
+    \xE4rztliche Versorgung. Ohne ein Klopfen betrat er die Praxis und l\xE4chelte
+    Neith entgegen, der hinter einem Esstisch handgeschriebene Unterlagen sortierte.
+    Die Praxiseinrichtung war aus allt\xE4glichen M\xF6beln zusammengew\xFCrfelt
+    worden. Der Esstisch und eine Ablage galten als Empfang und Datenablage, unterschiedliche
+    St\xFChle und Sessel als Wartebereich und das offene Wohnzimmer des Hauses war
+    mit ein paar Betten und Tischen zu einem Behandlungsraum umgestaltet worden.
+    \r\n\u201CDu warst nicht bei Pierre und hast ihm mit dem Karren geholfen? Obwohl
+    ich dich darum gebeten habe?\u201D (Minus Sympathie)\r\n\u201CEs ist blo\xDF
+    ein Karren... Wie wichtig kann es gewesen sein? Erz\xE4hl mir vielmehr was f\xFCr
+    eine \xDCberraschung du f\xFCr mich vorbereitet hast!\u201D\r\n\u201CBryce -
+    Pierre ist mein bester Freund. Es w\xFCrde mich freuen, wenn du wenigstens versuchen
+    w\xFCrdest dich gut mit ihm zu stellen..\u201D - \u201CWas ist die \xDCberraschung?\u201D\r\nNeith
     verdrehte sarkastisch die Augen: \u201CEin Picknick. Hol mich nach meiner Schicht
     ab und wir gehen ans Westende. Ich habe schon alles vorbereitet. Bis sp\xE4ter.\u201D"
   backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
@@ -48,4 +48,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

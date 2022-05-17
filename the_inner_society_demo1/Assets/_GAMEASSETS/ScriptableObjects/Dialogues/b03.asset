@@ -17,15 +17,15 @@ MonoBehaviour:
   contentText: "Sie bogen in die letzte Stra\xDFe ein, das Tor nicht weit von ihnen
     entfernt. Bereits auf dieser Entfernung konnten sie leichte Bewegungen ausmachen.
     War das endlich Hilfe, die das Tor \xF6ffnete um sie hinaus zu lassen? Oder hineinzukommen?\r\nIn
-    Gedanken gefangen bemerkten sie nicht wie  jemand -oder etwas- aus eine der kleinen
-    Gassen zu ihrer rechten kroch.\r\nDoch als es zum Sprung ansetze nahm Alyssa
-    die Bewegung war und schrie warnend auf. \r\nDank ihrer Warnung wandte sich Bryce
-    um und sah eine Klaue nach ihm schlagen. In letzter Sekunde duckte er sich hinunter
-    weg und brach in einen Sprint aus. \r\nAls er einen Blick nach hinten wagte,
-    konnte er wahrnehmen wie Mateo im Lauf Kisten umstie\xDF um dem Wesen die Verfolgung
-    zu erschweren. Zu seiner Beruhigung waren alle anderen direkt hinter ihm. \r\nDennoch
-    bildete sich ein Klo\xDF in seinem Hals, denn er war sich sicher, dass Alyssas
-    schrei nicht nur von ihnen geh\xF6rt worden war."
+    Gedanken gefangen bemerkten sie nicht wie  jemand - oder eher etwas - aus einer
+    der kleinen Gassen zu ihrer Rechten kroch.\r\nDoch als es zum Sprung ansetze
+    nahm Alyssa die Bewegung war und schrie warnend auf. \r\nDank ihrer Warnung wandte
+    sich Bryce um und sah eine Klaue nach ihm schlagen. In letzter Sekunde duckte
+    er sich hinunter weg und brach in einen Sprint aus. \r\nAls er einen Blick nach
+    hinten wagte, konnte er wahrnehmen wie Mateo im Lauf Kisten umstie\xDF, um dem
+    Wesen die Verfolgung zu erschweren. Zu seiner Beruhigung waren alle Anderen direkt
+    hinter ihm. \r\nDennoch bildete sich ein Klo\xDF in seinem Hals, denn er war
+    sich sicher, dass Alyssas Schrei nicht nur von ihnen geh\xF6rt worden war."
   backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
   character1Sprite: {fileID: 21300000, guid: 40b99a925cf2fd44abc366c87f028078, type: 3}
   character2Sprite: {fileID: 21300000, guid: e115c13f0d2444843b7bff93c0c2423d, type: 3}

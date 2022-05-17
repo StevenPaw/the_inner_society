@@ -16,20 +16,20 @@ MonoBehaviour:
   dialogueHeadline: Im Hinterzimmer
   contentText: "Um nicht aus der selbigen T\xFCr das Haus verlassen zu m\xFCssen,
     begaben sie sich in die Hinterzimmer des Hauses und stiegen nacheinander aus
-    einem der Fenster. Mit vorsicht begaben sie sich aus dem gr\xF6\xDFten Teil bev\xF6lkerten
+    einem der Fenster. Mit Vorsicht begaben sie sich aus dem gr\xF6\xDFtenteils bev\xF6lkerten
     Stadtteil heraus. \r\nDies stellte sich als schwieriger vor als erwartet. Die
     Anzahl an Mutanten, die sie immer mal wieder kurz sahen, bevor sie jemandem oder
-    etwas anderem hinterher zu eilen schienen war deutlich gr\xF6\xDFer als die Anzahl
-    an den letztens verstorbenen Personen. \r\nOft mussten sie sich hinter Kisten
-    ducken, in eine andere Gasse st\xFCrmen oder sich auf den Boden werfen um ihren
-    Blicken zu entgehen. \r\nObwohl sie relativ schnell den westlichen Teil der Stadt
-    erreichen konnten, f\xFChlte es sich an als sei ein Tag vergangen. Die Anspannung,
-    das Adrenalin; Sie waren nur auf eine Sache konzentriert und das war gemeinsam
-    ihr Ziel zu erreichen. \r\nDurch das Westende kamen sie fast ohne Vorf\xE4lle,
-    dennoch zuckten sie bei jedem knacken, bei jedem nat\xFCrlichen Ger\xE4usch in
-    sich zusammen. \r\nAls sie die Mauer vor sich sahen, waren es nur noch einige
-    Strassen zu einem der Tore und sie eilten etwas schneller und unachtsamer durch
-    die Stadt."
+    etwas anderem hinterher zu eilen schienen, war deutlich gr\xF6\xDFer als die
+    Anzahl an den letztens verstorbenen Personen. \r\nOft mussten sie sich hinter
+    Kisten ducken, in eine andere Gasse st\xFCrmen oder sich auf den Boden werfen,
+    um ihren Blicken zu entgehen. \r\nObwohl sie relativ schnell den westlichen Teil
+    der Stadt erreichen konnten, f\xFChlte es sich an als sei ein Tag vergangen.
+    Die Anspannung, das Adrenalin; Sie waren nur auf eine Sache konzentriert und
+    das war gemeinsam ihr Ziel zu erreichen. \r\nDurch das Westende kamen sie fast
+    ohne Vorf\xE4lle, dennoch zuckten sie bei jedem Knacken, bei jedem noch so nat\xFCrlichen
+    Ger\xE4usch in sich zusammen. \r\nAls sie die Mauer vor sich sahen, waren es
+    nur noch einige Stra\xDFen zu einem der Tore und sie eilten etwas schneller und
+    unachtsamer durch die Stadt."
   backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}

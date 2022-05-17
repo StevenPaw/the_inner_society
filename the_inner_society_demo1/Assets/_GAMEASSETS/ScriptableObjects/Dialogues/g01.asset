@@ -14,12 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: g01
   dialogueHeadline: Laboratiorium
-  contentText: "Ist die \xC4rztin NICHT vorher get\xF6tet worden kann sie den Code
-    zu dem Laboratorium knacken, da es sich um eine biologische Fachfrage handelt
-    (Sicherheitscode) und sie gelangen in das Labor\r\nWARTE WARTE HIER MUSS AUCH
-    NOCH WAS DAZWISCHEN\r\nIst die \xC4rztin get\xF6tet worden, m\xFCssen sie die
-    Leich eines Biologen durchsuchen um an ein Tablet mit der Antwort zu der Frage
-    zu gelangen"
+  contentText: "Ist die \xC4rztin dabei (Mechanik noch nicht eingebaut) \r\nZu ihrem
+    Pech war die T\xFCr zu dem gl\xE4sernen Laboratorium mit einem Sicherheitssystem
+    gesch\xFCtzt und nicht einfach zug\xE4nglich.\r\nUm Zutritt zu bekommen musste
+    eine Sicherheitsfrage mit 5 Versuchen korrekt beantwortet werden.\r\nBei der
+    Frage handelte es sich um das Fertigstellen einer biologischen Formel. Verzweifelt
+    blickte Bryce auf das Terminal, kein Wort verstehend von dem was dort angezeigt
+    wurde. \r\nAlyssa dr\xE4ngte sich neben ihn und gab ohne zu z\xF6gern eine Antwort
+    ein, bevor die T\xFCr einen zustimmenden Ton von sich gab und sich f\xFCr sie
+    \xF6ffnete. \r\nEr hatte vergessen, dass sie eigentlich Biologin war.\r\n\r\n\r\nIst
+    sie NICHT dabei:\r\nZu ihrem Pech war die T\xFCr zu dem gl\xE4sernen Laboratorium
+    mit einem Sicherheitssystem gesch\xFCtzt und nicht einfach zug\xE4nglich. \r\nUm
+    Zutritt zu bekommen musste eine Sicherheitsfrage mit 5 Versuchen korrekt beantwortet
+    werden. \r\nBei der Frage handelte es sich um das fertigstellen einer biologischen
+    Formel. Verzweifelt blickte Bryce auf das Terminal, kein Wort verstehend von
+    dem was dort angezeigt wurde. \r\nNeith schien seine Verwirrung zu teilen. W\xE4hrend
+    er \xFCber m\xF6gliche n\xE4chste Schritte nachdachte, ging er den Gang auf und
+    ab. Als er am anderen Ende angekommen war, blieb er wie angewurzelt stehen. \r\nMit
+    einer langsamen Handbewegung winkte er seinen Partner zu sich her\xFCber. Als
+    Bryce dem sich leicht biegenden Gang folgte, sah er wie eine auf dem r\xFCcken
+    liegende Person in sein Sichtfeld kam. \r\nEine in einen Laborkittel bekleidete
+    Leiche. Die Beiden untersuchten sie und fanden ein entsperrtes Tablet, durch
+    welches sie die Antwort der T\xFCr herausfinden konnten.\r\nBryce gab die Antwort
+    in das Terminal an der T\xFCr ein, bevor diese einen zustimmenden Ton von sich
+    gab und sich f\xFCr sie \xF6ffnete."
   backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}

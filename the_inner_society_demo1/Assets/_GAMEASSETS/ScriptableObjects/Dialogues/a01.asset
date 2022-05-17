@@ -17,15 +17,15 @@ MonoBehaviour:
   contentText: "Fr\xFChling 2075, 38 Jahre nach dem Ende des dritten Weltkrieges,
     der Teile Europas und anderer Kontinente unbewohnbar gelassen hat und 27 Jahre
     nach der Zusammenf\xFChrung und Erschaffung des Vereinigten Kanadaamerikas. \r\nBereits
-    seit 2 Jahren sind sie nun bereits in Stadtname eingesperrt. Gezwungen, gegen
-    ihren Willen. Testobjekte des unerreichbaren, freiem B\xFCndnisses Kanadaamerikas.
-    Von wegen Unantastbar. Bryce war sich sicher, dass kein Land das es f\xFCr n\xF6tig
-    hielt an den eigenen B\xFCrgern eine Waffe zu testen so unerreichbar und frei
-    sei wie es angebe. \r\nDie Kolonie der Betroffenen hatte sich mit hilfe gelegentlicher
+    seit 2 Jahren waren sie nun bereits in \u201CStadtname\u201D eingesperrt. Gezwungen,
+    gegen ihren Willen. Testobjekte des unerreichbaren, freien B\xFCndnisses Kanadaamerikas.
+    Von wegen unantastbar. Bryce war sich sicher, dass kein Land, das es f\xFCr n\xF6tig
+    hielt an den eigenen B\xFCrgern eine Waffe zu testen, so unerreichbar und frei
+    sei wie es vorgab. \r\nDie Kolonie der Betroffenen hatte mit Hilfe gelegentlicher
     Saat-, Trinkwasser- und Medizin-Lieferungen der Regierung gelernt sich in diesen
-    zwei Jahren selbst zu organisieren. Doch trotz des engen Zusammenhalts der Kolonie
-    Bewohner, da sie allein dasselbe Schicksal teilten und nur als Gruppe \xFCberlegen
-    k\xF6nnten, schien Bryce unter ihnen ein Aussenseiter."
+    zwei Jahren selbst zu organisieren. Doch trotz des engen Zusammenhalts der Kolonie-Bewohner,
+    da sie alle dasselbe Schicksal teilten und nur als Gruppe \xFCberleben konnten,
+    schien Bryce unter ihnen ein Au\xDFenseiter."
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
   character1Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   character2Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
@@ -36,4 +36,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

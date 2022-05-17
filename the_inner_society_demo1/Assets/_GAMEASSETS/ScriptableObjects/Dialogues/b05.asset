@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: b05
   dialogueHeadline: Im Kontrollraum
-  contentText: "Du verl\xE4sst die Mauer etc."
+  contentText: "In dem Kontrollraum waren nicht alle Computer zug\xE4nglich, doch
+    nach dem Durchst\xF6bern einiger Akten konnten die Beiden einen Zugangscode finden.
+    Mit Hilfe dessen lie\xDF sich auf das Terminal zugreifen, welches es ihnen erm\xF6glichte
+    Tore der Mauern zu kontrollieren. Die Beiden \xF6ffnen das Tor durch welches
+    sie zuvor in die Mauer gekommen waren und spurteten dann aus dem Ausgang hinaus.
+    Sobald sie in die Freiheit stolperten, blinzelten sie ein paar Male, da ihre
+    Augen sich erst einmal wieder an die Mittagssonne gew\xF6hnen mussten."
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}
@@ -22,7 +28,8 @@ MonoBehaviour:
   - optionTitle: weiter...
     newTextIdentifier: a18
     sympathyChange: []
-    receivedItems: []
+    receivedItems:
+    - {fileID: 11400000, guid: cac86a5301a5dab449b6b3b5d16af6ed, type: 2}
     receivedStatusEffects: []
     requiredItems: []
     forbiddenItems: []

@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: d01
   dialogueHeadline: Am Bett
-  contentText: Option C
+  contentText: "Neith blickte angespannt den sonst so vertrauten Augen entgegen und
+    wusste in diesem Moment, dass die entstellte Gestalt vor ihm nicht sein Kumpel
+    war. Pierre \xF6ffnete seinen Mund und schnappte mit einer schnellen Vorw\xE4rtsbewegung
+    nach seinem Hals. \r\nGeschockt, aber doch intuitiv riss Neith seinen Kopf nach
+    hinten und konnte gerade so den Z\xE4hnen seines besten Freundes entgegen. \r\nMit
+    seiner freien Hand griff Neith in seine Hemdtasche und zog ein Skalpell hervor,
+    welches er mit kurzem Z\xF6gern in Neiths rechtes Auge zu stechen versuchte.
+    \r\nDieser zischte w\xFCtend als das Metall sich in sein Auge bohrte und schreckte
+    zur\xFCck. Mit all seiner Kraft riss Neith sich aus Pierres Krallen und rannte
+    aus dem Zimmer."
   backgroundSprite: {fileID: 21300000, guid: 00e94ff6208f48b45af216a594f46141, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}
@@ -25,4 +34,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

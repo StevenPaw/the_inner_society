@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: a17
   dialogueHeadline: Mauer verlassen
-  contentText: "Du verl\xE4sst die Mauer etc."
+  contentText: "Ohne nachzudenken sprinteten Bryce und Neith dem Ausgang entgegen.
+    Sobald die T\xFCr nachgab und sie in die Freiheit stolpern, blinzeln sie ein
+    paar Male, da ihre Augen sich erst einmal wieder an die Mittagssonne gew\xF6hnen
+    mussten."
   backgroundSprite: {fileID: 21300000, guid: 18b68488dd20b1e4e9b3591c3edaf52f, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}

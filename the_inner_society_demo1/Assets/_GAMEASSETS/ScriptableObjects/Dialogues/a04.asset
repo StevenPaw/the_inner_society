@@ -26,7 +26,7 @@ MonoBehaviour:
     Konntest du den Karren reparieren?\u201D \r\n\u201CJap. Nichts besonderes, erz\xE4hl
     mir lieber was f\xFCr eine \xDCberraschung du f\xFCr mich vorbereitet hast!\u201D\r\nNeith
     verdrehte sarkastisch die Augen: \u201CEin Picknick. Hol mich nach meiner Schicht
-    ab und wir gehen ans Westende. Ich habe schon alles vorbereitet. Bis sp\xE4ter\u201D\n"
+    ab und wir gehen ans Westende. Ich habe schon alles vorbereitet. Bis sp\xE4ter.\u201D"
   backgroundSprite: {fileID: 21300000, guid: d3cd9255ff0ff9b4095d9f7e6290a79c, type: 3}
   character1Sprite: {fileID: 0}
   character2Sprite: {fileID: 0}
@@ -37,4 +37,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []

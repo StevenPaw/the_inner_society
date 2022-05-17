@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIdentifier: a06
   dialogueHeadline: Krankenzimmer
-  contentText: "W\xE4hrenddessen betritt Neith den Tr\xE4nen nahe das zum Krankenzimmer
+  contentText: "W\xE4hrenddessen betrat Neith den Tr\xE4nen nahe das zum Krankenzimmer
     umfunktionierte Wohnzimmer des alten Wohnhauses.\r\nAuch durch die gewobene Decke,
     die ihn bedeckt, waren dennoch deutlich die Umrisse der darunter liegenden Person
-    erkenntlich. Vorsichtig schritt Neith an den Leichnam seines enges Freundes heran.
-    \r\nPierre war einer der Ersten in der Kolonie gewesen. Er hatte sie aufgebaut,
-    gepflegt und geleitet. Mit offenen Armen hatte er eine jede arme Seele, die Opfer
-    der Regierung geworden war, empfangen. Der Klo\xDF in seinem Hals wurde gr\xF6\xDFer
+    erkenntlich. Vorsichtig schritt Neith an den Leichnam seines enges Freundes heran.\r\nPierre
+    war einer der Ersten in der Kolonie gewesen. Er hatte sie aufgebaut, gepflegt
+    und geleitet. Mit offenen Armen hatte er eine jede arme Seele, die Opfer der
+    Regierung geworden war, empfangen. Der Klo\xDF in seinem Hals wurde gr\xF6\xDFer
     und gr\xF6\xDFer, bis seine Sicht verschwamm und die Tr\xE4nen begannen, seine
     Wangen herunter zu laufen. \r\n\u201CPierre.. Was sollen wir nur ohne dich tun?
     Ich-\u201D\r"
@@ -34,4 +34,5 @@ MonoBehaviour:
     receivedItems: []
     receivedStatusEffects: []
     requiredItems: []
+    forbiddenItems: []
     usedItems: []
