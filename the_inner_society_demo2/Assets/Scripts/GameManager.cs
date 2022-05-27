@@ -13,8 +13,9 @@ namespace farmingsim
 
         public static GameManager Instance => instance;
         public GameObject FieldPrefab => fieldPrefab;
+        public IUsable ActiveUseObject => activeUseObject;
 
-        private void Start()
+        private void Awake()
         {
             instance = this;
         }

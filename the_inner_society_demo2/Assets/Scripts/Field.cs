@@ -5,6 +5,8 @@ namespace farmingsim
     public class Field : MonoBehaviour
     {
         [SerializeField] private bool farmActive;
+        [SerializeField] private IPlantable plantedPlant;
+
         private void Start()
         {
             for (int x = 0; x < 5; x++)

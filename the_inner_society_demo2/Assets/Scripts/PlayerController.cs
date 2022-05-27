@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using farmingsim;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,6 +31,24 @@ public class PlayerController : MonoBehaviour
         if (ctx.canceled)
         {
             movement = Vector2.zero;
+        }
+    }
+
+    public void OnInteract(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            if (GameManager.Instance.ActiveUseObject != null && Inventory.Instance.Item != null)
+            {
+                if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
+                {
+                    if (Inventory.Instance.Item is IPlantable)
+                    {
+                        FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
+                        plantable.SetPlantedPlant(Inventory.Instance.Item as IPlantable);
+                    }
+                }
+            }
         }
     }
     
