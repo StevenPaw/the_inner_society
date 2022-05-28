@@ -10,7 +10,7 @@ namespace farmingsim
         [SerializeField] private string plantName;
         [SerializeField] private Sprite[] sprites;
         [SerializeField] private float growthDurationPerStep;
-        
+
         public Sprite[] GetSprites()
         {
             return sprites;

@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:farmingsim:WordList
   plantName: ManaPlant
   sprites:
-  - {fileID: 21300000, guid: 99715146d41eb194cae57a733dbc0caf, type: 3}
+  - {fileID: -521297606, guid: b87879c2c2fabfa4783d0803e2885fd4, type: 3}
+  - {fileID: -160963041, guid: b87879c2c2fabfa4783d0803e2885fd4, type: 3}
+  - {fileID: 239910401, guid: b87879c2c2fabfa4783d0803e2885fd4, type: 3}
+  - {fileID: -1985683252, guid: b87879c2c2fabfa4783d0803e2885fd4, type: 3}
+  - {fileID: -1985423710, guid: b87879c2c2fabfa4783d0803e2885fd4, type: 3}
+  - {fileID: 1091390378, guid: b87879c2c2fabfa4783d0803e2885fd4, type: 3}
   growthDurationPerStep: 5

@@ -15,7 +15,16 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Activate",
+                    "name": "MouseMovement",
+                    "type": "Value",
+                    "id": "68e67403-6299-4e6b-9df2-5255a58c82b8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Use/Build",
                     "type": "Button",
                     "id": "fc2d7f7a-bd79-493f-a69d-7935d50d61bd",
                     "expectedControlType": "Button",
@@ -24,13 +33,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MouseMovement",
-                    "type": "Value",
-                    "id": "68e67403-6299-4e6b-9df2-5255a58c82b8",
-                    "expectedControlType": "Vector2",
+                    "name": "Destroy/Fight",
+                    "type": "Button",
+                    "id": "8aaf94d8-1a1a-4cc4-a3c3-9e88546319b8",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -124,23 +133,34 @@
                 },
                 {
                     "name": "",
-                    "id": "09db49b6-a6ee-48e3-8156-3fdb1cccc9ba",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Activate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "de1f7e91-a7f0-4567-b115-e97987ad5437",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MouseMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "444ba4f3-848c-414a-8a18-d48dab25df58",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Destroy/Fight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "09db49b6-a6ee-48e3-8156-3fdb1cccc9ba",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use/Build",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

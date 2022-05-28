@@ -1,4 +1,5 @@
 using System;
+using farmingsim.Utils;
 using UnityEngine;
 
 namespace farmingsim
@@ -10,9 +11,10 @@ namespace farmingsim
         [SerializeField] private SpriteRenderer selectIndicatorRenderer;
         [SerializeField] private Sprite farmFieldReadySprite;
         [SerializeField] private Sprite farmFieldNotReadySprite;
-        private int currentGrowthStep;
-        private bool isReady;
+        [SerializeField] private int currentGrowthStep;
+        [SerializeField] private bool isReady;
         private IPlantable plantedPlant;
+        private float growedTime;
 
         private bool inUse = false;
 
@@ -34,31 +36,47 @@ namespace farmingsim
             if (plantedPlant == null)
             {
                 plantRenderer.gameObject.SetActive(false);
+                growedTime = 0;
+                currentGrowthStep = 0;
             }
             else
             {
+                Debug.Log("Planted Plant: " + plantedPlant.GetName());
                 plantRenderer.gameObject.SetActive(true);
-                if (plantRenderer.sprite == plantedPlant.GetSprites()[currentGrowthStep])
+                if (plantRenderer.sprite != plantedPlant.GetSprites()[currentGrowthStep])
                 {
                     plantRenderer.sprite = plantedPlant.GetSprites()[currentGrowthStep];
                 }
+                
+                growedTime += Time.deltaTime;
+                if (growedTime > plantedPlant.GetGrowthDuration() && currentGrowthStep < plantedPlant.GetSprites().Length - 1)
+                {
+                    growedTime = 0;
+                    currentGrowthStep += 1;
+                }
             }
+
+            
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Area entered!");
-            if (Vector2.Distance(PlayerController.Instance.gameObject.transform.position,
-                gameObject.transform.position) < 30)
+            if (other.CompareTag(GameTags.CURSOR))
             {
-                GameManager.Instance.SetUsedObject(this);
+                if (Vector2.Distance(PlayerController.Instance.gameObject.transform.position,
+                        gameObject.transform.position) < 30)
+                {
+                    GameManager.Instance.SetUsedObject(this);
+                }
             }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            Debug.Log("Area leaved!");
-            GameManager.Instance.DeactivateUsedObject(this);
+            if (other.CompareTag(GameTags.CURSOR))
+            {
+                GameManager.Instance.DeactivateUsedObject(this);
+            }
         }
 
         public void SetUsed(bool isUsed)
@@ -74,6 +92,11 @@ namespace farmingsim
         public void SetPlantedPlant(IPlantable plant)
         {
             plantedPlant = plant;
+        }
+
+        public void DestroyPlantedPlant()
+        {
+            plantedPlant = null;
         }
     }
         

@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 playerPosition = playerObject.transform.position;
         Vector2 newCursorPosition;
-        Debug.Log("Mouse: " + mainCamera.ScreenToWorldPoint(mousePosition) + " | Player: " + playerPosition);
         if (Vector2.Distance(mainCamera.ScreenToWorldPoint(mousePosition), playerPosition) < maxCursorDistance)
         {
             newCursorPosition = mainCamera.ScreenToWorldPoint(mousePosition);
@@ -48,15 +47,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //(playerpos - cursorpos) : (cursorpos - maxdis)
-            Vector2 val1 = playerPosition - mainCamera.ScreenToWorldPoint(mousePosition);
-            Vector2 val2 = mainCamera.ScreenToWorldPoint(mousePosition) -
-                           new Vector3(maxCursorDistance, maxCursorDistance, 1);
-            newCursorPosition = val1 / val2;
+            Vector2 directionToMove = (mainCamera.ScreenToWorldPoint(mousePosition) - playerPosition);
+            directionToMove.Normalize();
             
-            //Vector2 directionToMove = (mainCamera.ScreenToWorldPoint(mousePosition) - playerPosition);
-            //newCursorPosition = (Vector2)playerPosition + (directionToMove * maxCursorDistance);
-            cursorObject.transform.position = new Vector3(newCursorPosition.x, newCursorPosition.y, -10);
+            newCursorPosition = (Vector2)playerPosition + new Vector2(directionToMove.x * maxCursorDistance, directionToMove.y * maxCursorDistance);
+            cursorObject.transform.position = new Vector3(newCursorPosition.x, newCursorPosition.y, -15);
         }
     }
 
@@ -65,7 +60,6 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed)
         {
             movement = ctx.ReadValue<Vector2>();
-            Debug.Log("Test");
         }
 
         if (ctx.canceled)
@@ -74,7 +68,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnInteract(InputAction.CallbackContext ctx)
+    public void OnBuildAction(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
         {
@@ -87,6 +81,21 @@ public class PlayerController : MonoBehaviour
                         FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
                         plantable.SetPlantedPlant(Inventory.Instance.Item as IPlantable);
                     }
+                }
+            }
+        }
+    }
+
+    public void OnDestroyAction(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            if (GameManager.Instance.ActiveUseObject != null)
+            {
+                if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
+                {
+                    FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
+                    plantable.DestroyPlantedPlant();
                 }
             }
         }
