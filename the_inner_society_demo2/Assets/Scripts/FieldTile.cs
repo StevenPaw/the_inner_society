@@ -47,11 +47,17 @@ namespace farmingsim
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            GameManager.Instance.SetUsedObject(this);
+            Debug.Log("Area entered!");
+            if (Vector2.Distance(PlayerController.Instance.gameObject.transform.position,
+                gameObject.transform.position) < 30)
+            {
+                GameManager.Instance.SetUsedObject(this);
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            Debug.Log("Area leaved!");
             GameManager.Instance.DeactivateUsedObject(this);
         }
 
