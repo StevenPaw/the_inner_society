@@ -72,14 +72,14 @@ public class PlayerController : MonoBehaviour
     {
         if (ctx.started)
         {
-            if (GameManager.Instance.ActiveUseObject != null && Inventory.Instance.Item != null)
+            if (GameManager.Instance.ActiveUseObject != null && Inventory.Instance.Items != null)
             {
                 if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
                 {
-                    if (Inventory.Instance.Item is IPlantable)
+                    if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is IPlantable)
                     {
                         FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
-                        plantable.SetPlantedPlant(Inventory.Instance.Item as IPlantable);
+                        plantable.SetPlantedPlant(Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
                     }
                 }
             }

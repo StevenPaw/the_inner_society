@@ -4,8 +4,8 @@ using UnityEngine;
 namespace farmingsim
 {
     [Serializable]
-    [CreateAssetMenu(fileName = "New Plantable Plant", menuName = "Farming/PlantablePlant", order = 1)]
-    public class PlantablePlant : ScriptableObject, IPlantable, IItem
+    [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item", order = 1)]
+    public class Item : ScriptableObject, IItem
     {
         [SerializeField] private string plantName;
         [SerializeField] private Sprite[] sprites;
@@ -23,7 +23,7 @@ namespace farmingsim
 
         public Sprite GetInventoryIcon()
         {
-            return sprites[sprites.Length - 1];
+            return sprites[sprites.Length];
         }
 
         public string GetName()
