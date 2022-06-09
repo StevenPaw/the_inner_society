@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2183,13 +2183,13 @@ TextureImporter:
       Ground_15: -382832888
       Ground_83: -1164985909
       Ground_9: 1196022810
-      Ground_40: 1745890163
-      Ground_23: -2040883771
-      Ground_94: 662595591
       Ground_51: 59569840
+      Ground_23: -2040883771
+      Ground_40: 1745890163
       Ground_36: 344300904
       Ground_11: -421203247
       Ground_5: -2093608925
+      Ground_94: 662595591
       Ground_73: -2045125383
       Ground_28: 1155473049
       Ground_76: -435151091
