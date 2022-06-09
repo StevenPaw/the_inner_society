@@ -541,11 +541,12 @@ MonoBehaviour:
   items:
   - {fileID: 11400000, guid: c6c58c9c77044d1469f5c27088c0780c, type: 2}
   currentlyActiveSlot: 0
-  maxAccessibleSlots: 18
+  maxAccessibleSlots: 9
   slotsHolderInventory: {fileID: 1743348955}
   slotsHolderHotbar: {fileID: 823339343}
   itemSlotPrefab: {fileID: 7409001939667804816, guid: 84356e6a4c545fe4cb3bdef5e90ca1d7, type: 3}
   slots: []
+  placeHolderPlant: {fileID: 11400000, guid: c6c58c9c77044d1469f5c27088c0780c, type: 2}
 --- !u!4 &267158491
 Transform:
   m_ObjectHideFlags: 0

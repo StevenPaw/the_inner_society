@@ -13,6 +13,7 @@ namespace farmingsim
         [SerializeField] private Transform slotsHolderHotbar;
         [SerializeField] private GameObject itemSlotPrefab;
         [SerializeField] private ItemSlot[] slots;
+        [SerializeField] private PlantablePlant placeHolderPlant;
         private static Inventory instance;
 
         public static Inventory Instance => instance;
@@ -47,10 +48,10 @@ namespace farmingsim
                 }
             }
             
-            for (int i = 0; i < maxAccessibleSlots; i++)
+            /*for (int i = 0; i < maxAccessibleSlots; i++)
             {
                 slots[i].HoldedItem = items[i] as IItem;
-            }
+            }*/
         }
 
         private void Start()
@@ -69,6 +70,12 @@ namespace farmingsim
                     slot.HoldedItem = items[i] as IItem;
                     slots[i] = slot;
                 }
+            }
+            
+            if (placeHolderPlant != null)
+            {
+                Items[currentlyActiveSlot] = placeHolderPlant;
+                slots[currentlyActiveSlot].HoldedItem = placeHolderPlant;
             }
         }
 
