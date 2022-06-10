@@ -2,7 +2,7 @@ using System;
 using farmingsim;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,7 +22,23 @@ public class PlayerController : MonoBehaviour
  
     private void Awake()
     {
-        instance = this;
+        if (Instance == null || Instance == this)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        mainCamera = Camera.main;
     }
 
     private void Start()
@@ -80,6 +96,14 @@ public class PlayerController : MonoBehaviour
                     {
                         FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
                         plantable.SetPlantedPlant(Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
+                    } 
+                    else if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is IUsable)
+                    {
+                        if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is ITool)
+                        {
+                            ITool tool = Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as ITool;
+                            tool.Use(GameManager.Instance.ActiveUseObject);
+                        }
                     }
                 }
             }
@@ -105,7 +129,17 @@ public class PlayerController : MonoBehaviour
     {
         mousePosition = ctx.ReadValue<Vector2>();
     }
-    
+
+    public void OnScroll(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            float scrollDirection = 0;
+            scrollDirection += ctx.ReadValue<Vector2>().normalized.y;
+            Inventory.Instance.ChangeActiveSlot((int) scrollDirection);
+        }
+    }
+
     public void Movement()
     {
         Vector2 currentPos = rbody.position;

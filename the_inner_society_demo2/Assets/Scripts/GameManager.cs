@@ -17,7 +17,16 @@ namespace farmingsim
 
         private void Awake()
         {
-            instance = this;
+            if (Instance == null || Instance == this)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+            DontDestroyOnLoad(gameObject);
         }
 
         public void SetUsedObject(IUsable usedTile)

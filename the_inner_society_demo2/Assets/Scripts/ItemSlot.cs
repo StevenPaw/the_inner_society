@@ -10,8 +10,16 @@ namespace farmingsim
     {
         [SerializeField] private Image itemImage;
         [SerializeField] private TMP_Text itemAmountText;
+        [SerializeField] private int slotID;
+        [SerializeField] private GameObject activeIndicator;
         private IItem holdedItem;
         private int itemAmount = 1;
+
+        public int SlotID
+        {
+            get => slotID;
+            set => slotID = value;
+        }
 
         public IItem HoldedItem
         {
@@ -29,6 +37,15 @@ namespace farmingsim
             else
             {
                 itemImage.gameObject.SetActive(false);
+            }
+
+            if (Inventory.Instance.CurrentlyActiveSlot == slotID)
+            {
+                activeIndicator.SetActive(true);
+            }
+            else
+            {
+                activeIndicator.SetActive(false);
             }
         }
     }

@@ -6,6 +6,7 @@ namespace farmingsim
     {
         [SerializeField] private bool farmActive;
         [SerializeField] private IPlantable plantedPlant;
+        [SerializeField] private Vector2 fieldSize;
 
         private void Start()
         {
@@ -16,9 +17,9 @@ namespace farmingsim
         {
             if (farmActive)
             {
-                for (int x = 0; x < 5; x++)
+                for (int x = 0; x < fieldSize.x; x++)
                 {
-                    for (int y = 0; y < 5; y++)
+                    for (int y = 0; y < fieldSize.y; y++)
                     {
                         Vector2 transformPosition = transform.position;
                         Vector2 transformOffset = new Vector2(x, y);

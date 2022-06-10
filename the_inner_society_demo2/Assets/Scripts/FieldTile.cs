@@ -18,6 +18,12 @@ namespace farmingsim
 
         private bool inUse = false;
 
+        public bool IsReady
+        {
+            get => isReady;
+            set => isReady = value;
+        }
+
         private void Update()
         {
             if (inUse)

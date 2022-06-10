@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
@@ -6,19 +7,18 @@ namespace farmingsim
 {
     public class Inventory : MonoBehaviour
     {
-        [SerializeField] private ScriptableObject[] items;
+        [SerializeField] private List<ScriptableObject> items;
         [SerializeField] private int currentlyActiveSlot;
         [SerializeField] private int maxAccessibleSlots;
         [SerializeField] private Transform slotsHolderInventory;
         [SerializeField] private Transform slotsHolderHotbar;
         [SerializeField] private GameObject itemSlotPrefab;
         [SerializeField] private ItemSlot[] slots;
-        [SerializeField] private PlantablePlant placeHolderPlant;
         private static Inventory instance;
 
         public static Inventory Instance => instance;
 
-        public ScriptableObject[] Items
+        public List<ScriptableObject> Items
         {
             get => items;
             set => items = value;
@@ -38,52 +38,88 @@ namespace farmingsim
 
         private void OnValidate()
         {
-            for (int i = 0; i < items.Length; i++)
+            for (int i = 0; i < maxAccessibleSlots; i++)
             {
-                if (items[i] is IItem)
-                { }
+                if (items.Count >= i)
+                {
+                    if (items[i] != null)
+                    {
+                        if (items[i] is IItem)
+                        {
+                        }
+                        else
+                        {
+                            items[i] = null;
+                        }
+                    }
+                }
                 else
                 {
-                    items[i] = null;
+                    items.Add(null);
                 }
             }
             
-            /*for (int i = 0; i < maxAccessibleSlots; i++)
+            for (int i = 0; i < maxAccessibleSlots; i++)
             {
-                slots[i].HoldedItem = items[i] as IItem;
-            }*/
+                if (items[i] != null)
+                {
+                    slots[i].HoldedItem = items[i] as IItem;
+                }
+                else
+                {
+                    slots[i].HoldedItem = null;
+                }
+            }
+        }
+        
+        private void Awake()
+        {
+            if (Instance == null || Instance == this)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+            
+            DontDestroyOnLoad(gameObject);
         }
 
         private void Start()
         {
+            slots = new ItemSlot[maxAccessibleSlots];
             for (int i = 0; i < maxAccessibleSlots; i++)
             {
                 if (i < 9)
                 {
                     ItemSlot slot = Instantiate(itemSlotPrefab, slotsHolderHotbar).GetComponent<ItemSlot>();
                     slot.HoldedItem = items[i] as IItem;
+                    slot.SlotID = i;
                     slots[i] = slot;
                 }
                 else
                 {
                     ItemSlot slot = Instantiate(itemSlotPrefab, slotsHolderInventory).GetComponent<ItemSlot>();
                     slot.HoldedItem = items[i] as IItem;
+                    slot.SlotID = i;
                     slots[i] = slot;
                 }
             }
-            
-            if (placeHolderPlant != null)
-            {
-                Items[currentlyActiveSlot] = placeHolderPlant;
-                slots[currentlyActiveSlot].HoldedItem = placeHolderPlant;
-            }
         }
 
-        private void Awake()
+        public void ChangeActiveSlot(int direction)
         {
-            instance = this;
-            slots = new ItemSlot[45];
-            items = new ScriptableObject[45];
+            currentlyActiveSlot -= direction;
+            if (currentlyActiveSlot > maxAccessibleSlots)
+            {
+                currentlyActiveSlot -= maxAccessibleSlots;
+            }
+            else if(currentlyActiveSlot < 0)
+            {
+                currentlyActiveSlot += maxAccessibleSlots;
+            }
         }
     }
 }

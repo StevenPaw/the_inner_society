@@ -39,6 +39,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2377482627
+    locked: 0
+  - name: DecoBackground
+    uniqueID: 1909844079
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Stage
+    uniqueID: 228316223
+    locked: 0
+  - name: Foreground
+    uniqueID: 2794041359
+    locked: 0
+  - name: DecoForeground
+    uniqueID: 1406212375
     locked: 0
