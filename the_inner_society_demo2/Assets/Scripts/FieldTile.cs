@@ -39,6 +39,15 @@ namespace farmingsim
                 selectIndicatorRenderer.color = color;
             }
 
+            if (isReady)
+            {
+                farmFieldRenderer.sprite = farmFieldReadySprite;
+            }
+            else
+            {
+                farmFieldRenderer.sprite = farmFieldNotReadySprite;
+            }
+
             if (plantedPlant == null)
             {
                 plantRenderer.gameObject.SetActive(false);
@@ -47,7 +56,6 @@ namespace farmingsim
             }
             else
             {
-                Debug.Log("Planted Plant: " + plantedPlant.GetName());
                 plantRenderer.gameObject.SetActive(true);
                 if (plantRenderer.sprite != plantedPlant.GetSprites()[currentGrowthStep])
                 {

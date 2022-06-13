@@ -95,15 +95,17 @@ public class PlayerController : MonoBehaviour
                     if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is IPlantable)
                     {
                         FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
-                        plantable.SetPlantedPlant(Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
-                    } 
-                    else if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is IUsable)
-                    {
-                        if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is ITool)
+                        if (plantable.IsReady)
                         {
-                            ITool tool = Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as ITool;
-                            tool.Use(GameManager.Instance.ActiveUseObject);
+                            plantable.SetPlantedPlant(
+                                Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
                         }
+                    } 
+                    else if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is ITool)
+                    {
+                        ITool tool = Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as ITool;
+                        Debug.Log("Tool used!");
+                        tool.Use(GameManager.Instance.ActiveUseObject);
                     }
                 }
             }
