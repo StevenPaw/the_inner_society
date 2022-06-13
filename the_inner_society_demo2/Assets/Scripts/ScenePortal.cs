@@ -18,6 +18,7 @@ public class ScenePortal : MonoBehaviour
             Vector2 targetDirection = (Vector2)other.gameObject.transform.position + (pathDirection * 3);
             other.gameObject.transform.DOMove(targetDirection, 1f)
                 .OnComplete(ChangeScene);
+            playerControllerRB.GetComponentInParent<PlayerController>().FadeToBlack(1f);
         }
     }
 

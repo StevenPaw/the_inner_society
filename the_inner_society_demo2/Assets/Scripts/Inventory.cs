@@ -78,10 +78,7 @@ namespace farmingsim
             else
             {
                 Destroy(gameObject);
-                return;
             }
-            
-            DontDestroyOnLoad(gameObject);
         }
 
         private void Start()

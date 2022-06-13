@@ -1,8 +1,10 @@
 using System;
+using DG.Tweening;
 using farmingsim;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float movementSpeed;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float maxCursorDistance;
+    [SerializeField] private Image blackPanel;
     private Vector2 movement;
     private Rigidbody2D rbody;
     private Vector2 mousePosition;
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         mainCamera = Camera.main;
+        blackPanel.DOFade(0f, 0.5f);
     }
 
     private void Start()
@@ -151,5 +155,10 @@ public class PlayerController : MonoBehaviour
         Vector2 newPos = currentPos + adjustedMovement * Time.fixedDeltaTime;
  
         rbody.MovePosition(newPos);
+    }
+
+    public void FadeToBlack(float duration = 0.5f)
+    {
+        blackPanel.DOFade(1f, duration);
     }
 }
