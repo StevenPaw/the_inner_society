@@ -103,6 +103,18 @@ namespace farmingsim
             }
         }
 
+        private void Update()
+        {
+            if (GameManager.Instance.InInventory)
+            {
+                slotsHolderInventory.gameObject.SetActive(true);
+            }
+            else
+            {
+                slotsHolderInventory.gameObject.SetActive(false);
+            }
+        }
+
         public void ChangeActiveSlot(int direction)
         {
             currentlyActiveSlot -= direction;

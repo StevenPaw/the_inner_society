@@ -12,6 +12,7 @@ namespace farmingsim
         [SerializeField] private TMP_Text itemAmountText;
         [SerializeField] private int slotID;
         [SerializeField] private GameObject activeIndicator;
+        [SerializeField] private Button interactButton;
         private IItem holdedItem;
         private int itemAmount = 1;
 
@@ -46,6 +47,15 @@ namespace farmingsim
             else
             {
                 activeIndicator.SetActive(false);
+            }
+
+            if (GameManager.Instance.InInventory)
+            {
+                interactButton.interactable = true;
+            }
+            else
+            {
+                interactButton.interactable = false;
             }
         }
     }

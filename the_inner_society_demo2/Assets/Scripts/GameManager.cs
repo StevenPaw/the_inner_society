@@ -7,13 +7,18 @@ namespace farmingsim
     {
         [SerializeField] private GameObject fieldPrefab;
         private IUsable activeUseObject;
+        private bool inInventory;
         
         private static GameManager instance;
-        
-
         public static GameManager Instance => instance;
         public GameObject FieldPrefab => fieldPrefab;
         public IUsable ActiveUseObject => activeUseObject;
+
+        public bool InInventory
+        {
+            get => inInventory;
+            set => inInventory = value;
+        }
 
         private void Awake()
         {

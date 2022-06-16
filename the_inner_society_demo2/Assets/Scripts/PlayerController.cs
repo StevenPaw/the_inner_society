@@ -9,10 +9,8 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject playerObject;
-    [SerializeField] private GameObject cursorObject;
+    [SerializeField] private CursorManager cursorManager;
     [SerializeField] float movementSpeed;
-    [SerializeField] private Camera mainCamera;
-    [SerializeField] private float maxCursorDistance;
     [SerializeField] private Image blackPanel;
     private Vector2 movement;
     private Rigidbody2D rbody;
@@ -41,7 +39,7 @@ public class PlayerController : MonoBehaviour
     
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        mainCamera = Camera.main;
+        cursorManager.OnSceneLoaded(scene, mode);
         blackPanel.DOFade(0f, 0.5f);
     }
 
@@ -53,26 +51,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
-    }
-
-    private void Update()
-    {
-        Vector3 playerPosition = playerObject.transform.position;
-        Vector2 newCursorPosition;
-        if (Vector2.Distance(mainCamera.ScreenToWorldPoint(mousePosition), playerPosition) < maxCursorDistance)
-        {
-            newCursorPosition = mainCamera.ScreenToWorldPoint(mousePosition);
-            cursorObject.transform.position =
-                new Vector3(newCursorPosition.x, newCursorPosition.y, -10);
-        }
-        else
-        {
-            Vector2 directionToMove = (mainCamera.ScreenToWorldPoint(mousePosition) - playerPosition);
-            directionToMove.Normalize();
-            
-            newCursorPosition = (Vector2)playerPosition + new Vector2(directionToMove.x * maxCursorDistance, directionToMove.y * maxCursorDistance);
-            cursorObject.transform.position = new Vector3(newCursorPosition.x, newCursorPosition.y, -15);
-        }
     }
 
     public void OnMove(InputAction.CallbackContext ctx)
@@ -133,7 +111,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMouseMovement(InputAction.CallbackContext ctx)
     {
-        mousePosition = ctx.ReadValue<Vector2>();
+        cursorManager.OnMouseMovement(ctx);
     }
 
     public void OnScroll(InputAction.CallbackContext ctx)
@@ -143,6 +121,14 @@ public class PlayerController : MonoBehaviour
             float scrollDirection = 0;
             scrollDirection += ctx.ReadValue<Vector2>().normalized.y;
             Inventory.Instance.ChangeActiveSlot((int) scrollDirection);
+        }
+    }
+
+    public void OnInventory(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            GameManager.Instance.InInventory = !GameManager.Instance.InInventory;
         }
     }
 
