@@ -309,6 +309,7 @@ MonoBehaviour:
   activeIndicator: {fileID: 653939767446826017}
   interactButton: {fileID: 2832752223517725025}
   playerController: {fileID: 0}
+  freeSlotImage: {fileID: -2040883771, guid: 9f500cdf6727c124a82f14c473ad8f38, type: 3}
 --- !u!1 &8746456860986091569
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,6 +36,15 @@ namespace farmingsim
         private void Update()
         {
             UpdatePosition();
+
+            if (itemInCursor != null)
+            {
+                cursorItemHoldRenderer.sprite = itemInCursor.GetInventoryIcon();
+            }
+            else
+            {
+                cursorItemHoldRenderer.sprite = null;
+            }
         }
 
         private void UpdatePosition()

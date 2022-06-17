@@ -14,6 +14,7 @@ namespace farmingsim
         [SerializeField] private GameObject activeIndicator;
         [SerializeField] private Button interactButton;
         [SerializeField] private PlayerController playerController;
+        [SerializeField] private Sprite freeSlotImage;
         private IItem holdedItem;
         private int holdedItemAmount = 1;
 
@@ -41,6 +42,11 @@ namespace farmingsim
             set => playerController = value;
         }
 
+        private void Start()
+        {
+            playerController = PlayerController.Instance;
+        }
+
         private void Update()
         {
             if (holdedItem != null)
@@ -50,7 +56,7 @@ namespace farmingsim
             }
             else
             {
-                itemImage.gameObject.SetActive(false);
+                itemImage.sprite = freeSlotImage;
             }
 
             if (Inventory.Instance.CurrentlyActiveSlot == slotID)
@@ -74,26 +80,42 @@ namespace farmingsim
 
         public void OnButtonleftPress()
         {
-            if (playerController.CursorManager.ItemInCursor.GetName() == holdedItem.GetName())
-            {
-                playerController.CursorManager.ItemInCursorAmount += 1;
-                holdedItemAmount -= 1;
-            } else if (playerController.CursorManager.ItemInCursor == null)
-            {
-                playerController.CursorManager.ItemInCursorAmount += 1;
-                playerController.CursorManager.ItemInCursor = holdedItem;
+            if (playerController.CursorManager.ItemInCursor != null){
+                if (holdedItem == null)
+                {
+                    holdedItem = playerController.CursorManager.ItemInCursor;
+                    holdedItemAmount = playerController.CursorManager.ItemInCursorAmount;
+                    playerController.CursorManager.ItemInCursor = null;
+                    playerController.CursorManager.ItemInCursorAmount = 0;
+                }  
+                else if (playerController.CursorManager.ItemInCursor.GetName() == holdedItem.GetName())
+                {
+                    playerController.CursorManager.ItemInCursorAmount += 1;
+                    holdedItemAmount -= 1;
+                }
+                else
+                {
+                    IItem inventoryItem = holdedItem;
+                    holdedItem = playerController.CursorManager.ItemInCursor;
+                    playerController.CursorManager.ItemInCursor = inventoryItem;
+                }
             }
             else
             {
-                IItem inventoryItem = holdedItem;
-                holdedItem = playerController.CursorManager.ItemInCursor;
-                playerController.CursorManager.ItemInCursor = inventoryItem;
+                if (holdedItem != null)
+                {
+                    playerController.CursorManager.ItemInCursorAmount += 1;
+                    playerController.CursorManager.ItemInCursor = holdedItem;
+                    holdedItemAmount -= 1;
+                }
             }
-            
+
             if (holdedItemAmount <= 0)
             {
                 holdedItem = null;
             }
+
+            Inventory.Instance.Items[slotID] = holdedItem;
         }
     }
 }

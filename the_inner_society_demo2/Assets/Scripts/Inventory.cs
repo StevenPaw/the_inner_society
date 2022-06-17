@@ -9,7 +9,8 @@ namespace farmingsim
     {
         [SerializeField] private int hotbarSize;
         [SerializeField] private int maxAccessibleSlots;
-        [SerializeField] private List<ScriptableObject> items;
+        [SerializeField] private List<ScriptableObject> itemObjects;
+        [SerializeField] private List<IItem> items;
         [SerializeField] private int currentlyActiveSlot;
         [SerializeField] private Transform slotsHolderInventory;
         [SerializeField] private Transform slotsHolderHotbar;
@@ -19,7 +20,13 @@ namespace farmingsim
 
         public static Inventory Instance => instance;
 
-        public List<ScriptableObject> Items
+        public List<ScriptableObject> ItemObjects
+        {
+            get => itemObjects;
+            set => itemObjects = value;
+        }
+
+        public List<IItem> Items
         {
             get => items;
             set => items = value;
@@ -41,30 +48,30 @@ namespace farmingsim
         {
             for (int i = 0; i < maxAccessibleSlots; i++)
             {
-                if (items.Count > i)
+                if (itemObjects.Count > i)
                 {
-                    if (items[i] != null)
+                    if (itemObjects[i] != null)
                     {
-                        if (items[i] is IItem)
+                        if (itemObjects[i] is IItem)
                         {
                         }
                         else
                         {
-                            items[i] = null;
+                            itemObjects[i] = null;
                         }
                     }
                 }
                 else
                 {
-                    items.Add(null);
+                    itemObjects.Add(null);
                 }
             }
 
-            if (items.Count > maxAccessibleSlots)
+            if (itemObjects.Count > maxAccessibleSlots)
             {
-                for (int i = items.Count - 1; i >= maxAccessibleSlots; i--)
+                for (int i = itemObjects.Count - 1; i >= maxAccessibleSlots; i--)
                 {
-                    items.Remove(items[i]);
+                    itemObjects.Remove(itemObjects[i]);
                 }
             }
         }
@@ -89,16 +96,30 @@ namespace farmingsim
                 if (i < hotbarSize)
                 {
                     ItemSlot slot = Instantiate(itemSlotPrefab, slotsHolderHotbar).GetComponent<ItemSlot>();
-                    slot.HoldedItem = items[i] as IItem;
+                    slot.HoldedItem = itemObjects[i] as IItem;
                     slot.SlotID = i;
                     slots[i] = slot;
                 }
                 else
                 {
                     ItemSlot slot = Instantiate(itemSlotPrefab, slotsHolderInventory).GetComponent<ItemSlot>();
-                    slot.HoldedItem = items[i] as IItem;
+                    slot.HoldedItem = itemObjects[i] as IItem;
                     slot.SlotID = i;
                     slots[i] = slot;
+                }
+            }
+
+            items = new List<IItem>();
+
+            foreach (ScriptableObject obj in itemObjects)
+            {
+                if (obj != null)
+                {
+                    items.Add(obj as IItem);
+                }
+                else
+                {
+                    items.Add(null);
                 }
             }
         }
