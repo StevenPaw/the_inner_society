@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private static PlayerController instance;
 
     public static PlayerController Instance => instance;
+    public CursorManager CursorManager => cursorManager;
  
     private void Awake()
     {

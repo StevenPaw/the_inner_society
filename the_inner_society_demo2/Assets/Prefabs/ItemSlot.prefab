@@ -308,6 +308,7 @@ MonoBehaviour:
   slotID: 0
   activeIndicator: {fileID: 653939767446826017}
   interactButton: {fileID: 2832752223517725025}
+  playerController: {fileID: 0}
 --- !u!1 &8746456860986091569
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +430,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8418166233734749693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 676404797744680899}
+        m_TargetAssemblyTypeName: farmingsim.ItemSlot, Assembly-CSharp
+        m_MethodName: OnButtonleftPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3894477126577578243
 MonoBehaviour:
   m_ObjectHideFlags: 0

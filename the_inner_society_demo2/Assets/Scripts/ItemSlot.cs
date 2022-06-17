@@ -13,8 +13,9 @@ namespace farmingsim
         [SerializeField] private int slotID;
         [SerializeField] private GameObject activeIndicator;
         [SerializeField] private Button interactButton;
+        [SerializeField] private PlayerController playerController;
         private IItem holdedItem;
-        private int itemAmount = 1;
+        private int holdedItemAmount = 1;
 
         public int SlotID
         {
@@ -28,12 +29,24 @@ namespace farmingsim
             set => holdedItem = value;
         }
 
+        public int HoldedItemAmount
+        {
+            get => holdedItemAmount;
+            set => holdedItemAmount = value;
+        }
+
+        public PlayerController PlayerController
+        {
+            get => playerController;
+            set => playerController = value;
+        }
+
         private void Update()
         {
             if (holdedItem != null)
             {
                 itemImage.sprite = holdedItem.GetInventoryIcon();
-                itemAmountText.text = itemAmount.ToString();
+                itemAmountText.text = holdedItemAmount.ToString();
             }
             else
             {
@@ -56,6 +69,30 @@ namespace farmingsim
             else
             {
                 interactButton.interactable = false;
+            }
+        }
+
+        public void OnButtonleftPress()
+        {
+            if (playerController.CursorManager.ItemInCursor.GetName() == holdedItem.GetName())
+            {
+                playerController.CursorManager.ItemInCursorAmount += 1;
+                holdedItemAmount -= 1;
+            } else if (playerController.CursorManager.ItemInCursor == null)
+            {
+                playerController.CursorManager.ItemInCursorAmount += 1;
+                playerController.CursorManager.ItemInCursor = holdedItem;
+            }
+            else
+            {
+                IItem inventoryItem = holdedItem;
+                holdedItem = playerController.CursorManager.ItemInCursor;
+                playerController.CursorManager.ItemInCursor = inventoryItem;
+            }
+            
+            if (holdedItemAmount <= 0)
+            {
+                holdedItem = null;
             }
         }
     }

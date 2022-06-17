@@ -11,9 +11,22 @@ namespace farmingsim
         [SerializeField] private SpriteRenderer cursorIconRenderer;
         [SerializeField] private SpriteRenderer cursorItemHoldRenderer;
         private IItem itemInCursor;
+        private int itemInCursorAmount;
         private Camera mainCamera;
         private Vector2 mousePosition;
         [SerializeField] private float maxCursorDistance;
+
+        public IItem ItemInCursor
+        {
+            get => itemInCursor;
+            set => itemInCursor = value;
+        }
+
+        public int ItemInCursorAmount
+        {
+            get => itemInCursorAmount;
+            set => itemInCursorAmount = value;
+        }
 
         public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
