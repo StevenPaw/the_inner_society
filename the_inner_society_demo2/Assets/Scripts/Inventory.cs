@@ -10,13 +10,15 @@ namespace farmingsim
         [SerializeField] private int hotbarSize;
         [SerializeField] private int maxAccessibleSlots;
         [SerializeField] private List<ScriptableObject> itemObjects;
-        [SerializeField] private List<IItem> items;
         [SerializeField] private int currentlyActiveSlot;
         [SerializeField] private Transform slotsHolderInventory;
         [SerializeField] private Transform slotsHolderHotbar;
         [SerializeField] private GameObject itemSlotPrefab;
         [SerializeField] private ItemSlot[] slots;
         private static Inventory instance;
+        
+        private List<IItem> items;
+        private List<int> itemAmounts;
 
         public static Inventory Instance => instance;
 
@@ -31,7 +33,13 @@ namespace farmingsim
             get => items;
             set => items = value;
         }
-        
+
+        public List<int> ItemAmounts
+        {
+            get => itemAmounts;
+            set => itemAmounts = value;
+        }
+
         public int CurrentlyActiveSlot
         {
             get => currentlyActiveSlot;
@@ -110,16 +118,19 @@ namespace farmingsim
             }
 
             items = new List<IItem>();
+            itemAmounts = new List<int>();
 
             foreach (ScriptableObject obj in itemObjects)
             {
                 if (obj != null)
                 {
                     items.Add(obj as IItem);
+                    itemAmounts.Add(1);
                 }
                 else
                 {
                     items.Add(null);
+                    itemAmounts.Add(0);
                 }
             }
         }
@@ -146,6 +157,35 @@ namespace farmingsim
             else if(currentlyActiveSlot < 0)
             {
                 currentlyActiveSlot += hotbarSize;
+            }
+        }
+
+        public void AddItemToInventory(IItem collectedItem, int collectedAmount)
+        {
+            for (int i = 0; i < maxAccessibleSlots; i++)
+            {
+                if (items[i] != null)
+                {
+                    if (items[i].GetName() == collectedItem.GetName())
+                    {
+                        itemAmounts[i] += collectedAmount;
+                        slots[i].HoldedItemAmount = itemAmounts[i];
+                        slots[i].HoldedItem = items[i];
+                        return;
+                    }
+                }
+            }
+            
+            for (int i = 0; i < maxAccessibleSlots; i++)
+            {
+                if (items[i] == null)
+                {
+                    items[i] = collectedItem;
+                    itemAmounts[i] = collectedAmount;
+                    slots[i].HoldedItemAmount = itemAmounts[i];
+                    slots[i].HoldedItem = items[i];
+                    return;
+                }
             }
         }
     }

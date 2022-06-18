@@ -116,6 +116,7 @@ namespace farmingsim
             }
 
             Inventory.Instance.Items[slotID] = holdedItem;
+            Inventory.Instance.ItemAmounts[slotID] = holdedItemAmount;
         }
     }
 }
