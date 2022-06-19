@@ -34,7 +34,6 @@ namespace farmingsim
                 if (!fieldTile.IsReady)
                 {
                     fieldTile.IsReady = true;
-                    Debug.Log("MADE READY!");
                 }
             }
         }

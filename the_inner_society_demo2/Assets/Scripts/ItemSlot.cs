@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ namespace farmingsim
         [SerializeField] private Button interactButton;
         [SerializeField] private PlayerController playerController;
         [SerializeField] private Sprite freeSlotImage;
+        [SerializeField] private Sprite hoverSprite;
         private IItem holdedItem;
         private int holdedItemAmount = 1;
 
@@ -68,55 +70,130 @@ namespace farmingsim
                 activeIndicator.SetActive(false);
             }
 
-            if (GameManager.Instance.InInventory)
+            if (holdedItemAmount <= 0 || holdedItem == null)
             {
-                interactButton.interactable = true;
-            }
-            else
-            {
-                interactButton.interactable = false;
+                itemAmountText.text = "";
             }
         }
 
-        public void OnButtonleftPress()
+        public void OnButtonRightPress()
         {
-            if (playerController.CursorManager.ItemInCursor != null){
-                if (holdedItem == null)
+            if (GameManager.Instance.InInventory)
+            {
+                if (playerController.CursorManager.ItemInCursor != null)
                 {
-                    holdedItem = playerController.CursorManager.ItemInCursor;
-                    holdedItemAmount = playerController.CursorManager.ItemInCursorAmount;
-                    playerController.CursorManager.ItemInCursor = null;
-                    playerController.CursorManager.ItemInCursorAmount = 0;
-                }  
-                else if (playerController.CursorManager.ItemInCursor.GetName() == holdedItem.GetName())
-                {
-                    playerController.CursorManager.ItemInCursorAmount += 1;
-                    holdedItemAmount -= 1;
+                    if (holdedItem == null)
+                    {
+                        holdedItem = playerController.CursorManager.ItemInCursor;
+                        holdedItemAmount = playerController.CursorManager.ItemInCursorAmount;
+                        playerController.CursorManager.ItemInCursor = null;
+                        playerController.CursorManager.ItemInCursorAmount = 0;
+                    }
+                    else if (playerController.CursorManager.ItemInCursor.GetName() == holdedItem.GetName())
+                    {
+                        playerController.CursorManager.ItemInCursorAmount += 1;
+                        holdedItemAmount -= 1;
+                    }
+                    else
+                    {
+                        IItem inventoryItem = holdedItem;
+                        int hItemAmount = holdedItemAmount;
+                        holdedItem = playerController.CursorManager.ItemInCursor;
+                        holdedItemAmount = playerController.CursorManager.ItemInCursorAmount;
+                        playerController.CursorManager.ItemInCursor = inventoryItem;
+                        playerController.CursorManager.ItemInCursorAmount = hItemAmount;
+                    }
                 }
                 else
                 {
-                    IItem inventoryItem = holdedItem;
-                    holdedItem = playerController.CursorManager.ItemInCursor;
-                    playerController.CursorManager.ItemInCursor = inventoryItem;
+                    if (holdedItem != null)
+                    {
+                        playerController.CursorManager.ItemInCursorAmount += 1;
+                        playerController.CursorManager.ItemInCursor = holdedItem;
+                        holdedItemAmount -= 1;
+                    }
                 }
-            }
-            else
-            {
-                if (holdedItem != null)
+
+                if (holdedItemAmount <= 0)
                 {
-                    playerController.CursorManager.ItemInCursorAmount += 1;
-                    playerController.CursorManager.ItemInCursor = holdedItem;
-                    holdedItemAmount -= 1;
+                    holdedItem = null;
+                }
+
+                Inventory.Instance.Items[slotID] = holdedItem;
+                Inventory.Instance.ItemAmounts[slotID] = holdedItemAmount;
+            }
+        }
+
+        public void OnButtonLeftPress()
+        {
+            if (GameManager.Instance.InInventory)
+            {
+                if (playerController.CursorManager.ItemInCursor != null)
+                {
+                    if (holdedItem == null)
+                    {
+                        holdedItem = playerController.CursorManager.ItemInCursor;
+                        holdedItemAmount = playerController.CursorManager.ItemInCursorAmount;
+                        playerController.CursorManager.ItemInCursor = null;
+                        playerController.CursorManager.ItemInCursorAmount = 0;
+                    }
+                    else if (playerController.CursorManager.ItemInCursor.GetName() == holdedItem.GetName())
+                    {
+                        playerController.CursorManager.ItemInCursorAmount += holdedItemAmount;
+                        holdedItemAmount = 0;
+                    }
+                    else
+                    {
+                        IItem inventoryItem = holdedItem;
+                        int hItemAmount = holdedItemAmount;
+                        holdedItem = playerController.CursorManager.ItemInCursor;
+                        holdedItemAmount = playerController.CursorManager.ItemInCursorAmount;
+                        playerController.CursorManager.ItemInCursor = inventoryItem;
+                        playerController.CursorManager.ItemInCursorAmount = hItemAmount;
+                    }
+                }
+                else
+                {
+                    if (holdedItem != null)
+                    {
+                        playerController.CursorManager.ItemInCursorAmount = holdedItemAmount;
+                        playerController.CursorManager.ItemInCursor = holdedItem;
+                        holdedItemAmount = 0;
+                    }
+                }
+
+                if (holdedItemAmount <= 0)
+                {
+                    holdedItem = null;
+                }
+
+                Inventory.Instance.Items[slotID] = holdedItem;
+                Inventory.Instance.ItemAmounts[slotID] = holdedItemAmount;
+            }
+        }
+
+        public void OnButtonEnter()
+        {
+            if (GameManager.Instance.InInventory)
+            {
+                itemImage.DOFade(0.5f, 0.3f);
+                if (holdedItemAmount <= 0 || holdedItem == null)
+                {
+                    itemImage.sprite = hoverSprite;
                 }
             }
+        }
 
-            if (holdedItemAmount <= 0)
+        public void OnButtonExit()
+        {
+            if (GameManager.Instance.InInventory)
             {
-                holdedItem = null;
+                itemImage.DOFade(1f, 0.3f);
+                if (holdedItemAmount <= 0 || holdedItem == null)
+                {
+                    itemImage.sprite = freeSlotImage;
+                }
             }
-
-            Inventory.Instance.Items[slotID] = holdedItem;
-            Inventory.Instance.ItemAmounts[slotID] = holdedItemAmount;
         }
     }
 }

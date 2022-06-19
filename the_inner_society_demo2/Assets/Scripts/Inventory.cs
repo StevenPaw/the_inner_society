@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+using DG.Tweening;
 using UnityEngine;
 
 namespace farmingsim
@@ -158,6 +159,16 @@ namespace farmingsim
             {
                 currentlyActiveSlot += hotbarSize;
             }
+
+            if (items[CurrentlyActiveSlot] is ITool)
+            {
+                PlayerController.Instance.ToolRenderer.sprite = items[CurrentlyActiveSlot].GetInventoryIcon();
+                PlayerController.Instance.ToolRenderer.DOFade(1f, 0.2f);
+            }
+            else
+            {
+                PlayerController.Instance.ToolRenderer.DOFade(0f, 0.2f);
+            }
         }
 
         public void AddItemToInventory(IItem collectedItem, int collectedAmount)
@@ -187,6 +198,17 @@ namespace farmingsim
                     return;
                 }
             }
+        }
+
+        public void RemoveItemFromInventory(int slotID, int usedAmount)
+        {
+            itemAmounts[slotID] -= usedAmount;
+            if (itemAmounts[slotID] <= 0)
+            {
+                items[slotID] = null;
+            }
+            slots[slotID].HoldedItemAmount = itemAmounts[slotID];
+            slots[slotID].HoldedItem = items[slotID];
         }
     }
 }

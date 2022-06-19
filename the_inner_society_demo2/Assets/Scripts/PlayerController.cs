@@ -12,16 +12,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CursorManager cursorManager;
     [SerializeField] float movementSpeed;
     [SerializeField] private Image blackPanel;
+    [SerializeField] private SpriteRenderer toolRenderer;
     private Vector2 movement;
     private Rigidbody2D rbody;
     private Vector2 mousePosition;
-    
 
     private static PlayerController instance;
 
     public static PlayerController Instance => instance;
     public CursorManager CursorManager => cursorManager;
- 
+    public SpriteRenderer ToolRenderer => toolRenderer;
+
     private void Awake()
     {
         if (Instance == null || Instance == this)
@@ -82,12 +83,12 @@ public class PlayerController : MonoBehaviour
                         {
                             plantable.SetPlantedPlant(
                                 Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
+                            Inventory.Instance.RemoveItemFromInventory(Inventory.Instance.CurrentlyActiveSlot, 1);
                         }
                     } 
                     else if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is ITool)
                     {
                         ITool tool = Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as ITool;
-                        Debug.Log("Tool used!");
                         tool.Use(GameManager.Instance.ActiveUseObject);
                     }
                 }
@@ -103,8 +104,32 @@ public class PlayerController : MonoBehaviour
             {
                 if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
                 {
-                    FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
-                    plantable.DestroyPlantedPlant();
+                    FieldTile fieldTile = (FieldTile) GameManager.Instance.ActiveUseObject;
+                    if (!fieldTile.IsFree)
+                    {
+                        if (fieldTile.CanBeHarvested)
+                        {
+                            IItem[] collectedItems = fieldTile.HarvestPlantedPlant();
+                            if (collectedItems != null)
+                            {
+                                foreach (IItem item in collectedItems)
+                                {
+                                    Inventory.Instance.AddItemToInventory(item, 1);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            IItem[] collectedItems = fieldTile.DestroyPlantedPlant();
+                            if (collectedItems != null)
+                            {
+                                foreach (IItem item in collectedItems)
+                                {
+                                    Inventory.Instance.AddItemToInventory(item, 1);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

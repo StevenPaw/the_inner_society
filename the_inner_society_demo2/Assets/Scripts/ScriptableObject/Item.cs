@@ -8,22 +8,11 @@ namespace farmingsim
     public class Item : ScriptableObject, IItem
     {
         [SerializeField] private string plantName;
-        [SerializeField] private Sprite[] sprites;
-        [SerializeField] private float growthDurationPerStep;
-
-        public Sprite[] GetSprites()
-        {
-            return sprites;
-        }
-
-        public float GetGrowthDuration()
-        {
-            return growthDurationPerStep;
-        }
+        [SerializeField] private Sprite sprite;
 
         public Sprite GetInventoryIcon()
         {
-            return sprites[sprites.Length];
+            return sprite;
         }
 
         public string GetName()

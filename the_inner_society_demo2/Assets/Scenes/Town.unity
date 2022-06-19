@@ -7699,7 +7699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneToTeleportTo: Settlement
   pathDirection: {x: 0, y: -1}
-  targetPosition: {x: -0.5, y: 5.5}
+  targetPosition: {x: -12.5, y: 12.5}
 --- !u!58 &1556253447
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10815,7 +10815,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4040747, y: 1}
+    m_SensorSize: {x: 2.1765704, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

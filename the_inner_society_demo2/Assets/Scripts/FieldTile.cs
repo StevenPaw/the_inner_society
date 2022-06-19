@@ -13,10 +13,13 @@ namespace farmingsim
         [SerializeField] private Sprite farmFieldNotReadySprite;
         [SerializeField] private int currentGrowthStep;
         [SerializeField] private bool isReady;
-        private IPlantable plantedPlant;
+        private IPlantable plantedSeed;
         private float growedTime;
+        private bool isFree = true;
+        private bool canBeHarvested;
 
         private bool inUse = false;
+        public bool IsFree => isFree;
 
         public bool IsReady
         {
@@ -24,9 +27,11 @@ namespace farmingsim
             set => isReady = value;
         }
 
+        public bool CanBeHarvested => canBeHarvested;
+
         private void Update()
         {
-            if (inUse)
+            if (inUse && !GameManager.Instance.InInventory)
             {
                 var color = selectIndicatorRenderer.color;
                 color = new Color(color.r, color.g, color.b, 1);
@@ -48,25 +53,36 @@ namespace farmingsim
                 farmFieldRenderer.sprite = farmFieldNotReadySprite;
             }
 
-            if (plantedPlant == null)
+            if (plantedSeed == null)
             {
                 plantRenderer.gameObject.SetActive(false);
                 growedTime = 0;
                 currentGrowthStep = 0;
+                canBeHarvested = false;
+                isFree = true;
             }
             else
             {
+                isFree = false;
                 plantRenderer.gameObject.SetActive(true);
-                if (plantRenderer.sprite != plantedPlant.GetSprites()[currentGrowthStep])
+                if (plantRenderer.sprite != plantedSeed.GetSprites()[currentGrowthStep])
                 {
-                    plantRenderer.sprite = plantedPlant.GetSprites()[currentGrowthStep];
+                    plantRenderer.sprite = plantedSeed.GetSprites()[currentGrowthStep];
                 }
                 
                 growedTime += Time.deltaTime;
-                if (growedTime > plantedPlant.GetGrowthDuration() && currentGrowthStep < plantedPlant.GetSprites().Length - 1)
+                if (growedTime > plantedSeed.GetGrowthDuration() && currentGrowthStep < plantedSeed.GetSprites().Length - 1)
                 {
                     growedTime = 0;
                     currentGrowthStep += 1;
+                    canBeHarvested = false;
+                } else if (currentGrowthStep < plantedSeed.GetSprites().Length - 1)
+                {
+                    canBeHarvested = false;
+                }
+                else if(currentGrowthStep >= plantedSeed.GetSprites().Length - 1)
+                {
+                    canBeHarvested = true;
                 }
             }
 
@@ -105,12 +121,24 @@ namespace farmingsim
         
         public void SetPlantedPlant(IPlantable plant)
         {
-            plantedPlant = plant;
+            plantedSeed = plant;
         }
 
-        public void DestroyPlantedPlant()
+        public IItem[] DestroyPlantedPlant()
         {
-            plantedPlant = null;
+            Debug.Log("Destroying!");
+            IItem[] items = new IItem[1];
+            items[0] = plantedSeed as IItem;
+            plantedSeed = null;
+            return items;
+        }
+        
+        public IItem[] HarvestPlantedPlant()
+        {
+            Debug.Log("Harvesting!");
+            IItem[] items = plantedSeed.GetHarvestedItems();
+            plantedSeed = null;
+            return items;
         }
     }
         
