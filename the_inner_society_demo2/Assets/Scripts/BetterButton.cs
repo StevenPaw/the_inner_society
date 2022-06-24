@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -12,6 +13,12 @@ namespace farmingsim
         public UnityEvent onMiddle;
         public UnityEvent onEnter;
         public UnityEvent onExit;
+        public UnityEvent onBeginning;
+
+        private void Start()
+        {
+            onBeginning.Invoke();
+        }
 
         public void OnPointerClick(PointerEventData eventData)
         {

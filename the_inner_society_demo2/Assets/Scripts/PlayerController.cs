@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float movementSpeed;
     [SerializeField] private Image blackPanel;
     [SerializeField] private SpriteRenderer toolRenderer;
+    [SerializeField] private Animator playerAnimator;
     private Vector2 movement;
     private Rigidbody2D rbody;
     private Vector2 mousePosition;
@@ -162,8 +163,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 currentPos = rbody.position;
  
+        playerAnimator.SetFloat("MovementX", movement.x);
+        playerAnimator.SetFloat("MovementY", -movement.y);
+        
         Vector2 adjustedMovement = movement * movementSpeed;
- 
+
         Vector2 newPos = currentPos + adjustedMovement * Time.fixedDeltaTime;
  
         rbody.MovePosition(newPos);
