@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80ffe947eb449a0926c9673a2040c8e, type: 3}
+  m_Name: TomatoSeeds
+  m_EditorClassIdentifier: 
+  ingredients:
+  - item: {fileID: 11400000, guid: 734b80951aacbcc47ba6d8b26e335018, type: 2}
+    amount: 1
+    isConsumedOnCrafting: 1
+  result:
+  - {fileID: 11400000, guid: f7054cd51b9dc7843aa970dcbaf3b283, type: 2}
