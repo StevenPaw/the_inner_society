@@ -22,5 +22,5 @@ MonoBehaviour:
   growthDurationPerStep: 8
   inventorySprite: {fileID: -419616361, guid: dd457e7c16db4204492a5e6a0fbe47ab, type: 3}
   harvestedItems:
-  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 734b80951aacbcc47ba6d8b26e335018, type: 2}
   - {fileID: 11400000, guid: 734b80951aacbcc47ba6d8b26e335018, type: 2}

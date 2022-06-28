@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design.Serialization;
+﻿using System.Collections.Generic;
 using DG.Tweening;
+using farmingsim.EventSystem;
 using UnityEngine;
 
 namespace farmingsim
@@ -97,6 +96,16 @@ namespace farmingsim
             }
         }
 
+        private void OnEnable()
+        {
+            Message<ToggleInventoryEvent>.Add(OnToggleInventoryEvent);
+        }
+
+        private void OnDisable()
+        {
+            Message<ToggleInventoryEvent>.Remove(OnToggleInventoryEvent);
+        }
+
         private void Start()
         {
             slots = new ItemSlot[maxAccessibleSlots];
@@ -134,9 +143,10 @@ namespace farmingsim
                     itemAmounts.Add(0);
                 }
             }
+            Message.Raise(new InventoryChangeEvent());
         }
 
-        private void Update()
+        private void OnToggleInventoryEvent(ToggleInventoryEvent ctx)
         {
             if (GameManager.Instance.InInventory)
             {
@@ -169,9 +179,11 @@ namespace farmingsim
             {
                 PlayerController.Instance.ToolRenderer.DOFade(0f, 0.2f);
             }
+            
+            Message.Raise(new InventoryChangeEvent());
         }
 
-        public void AddItemToInventory(IItem collectedItem, int collectedAmount)
+        public bool AddItemToInventory(IItem collectedItem, int collectedAmount)
         {
             for (int i = 0; i < maxAccessibleSlots; i++)
             {
@@ -182,7 +194,8 @@ namespace farmingsim
                         itemAmounts[i] += collectedAmount;
                         slots[i].HoldedItemAmount = itemAmounts[i];
                         slots[i].HoldedItem = items[i];
-                        return;
+                        Message.Raise(new InventoryChangeEvent());
+                        return true;
                     }
                 }
             }
@@ -195,9 +208,13 @@ namespace farmingsim
                     itemAmounts[i] = collectedAmount;
                     slots[i].HoldedItemAmount = itemAmounts[i];
                     slots[i].HoldedItem = items[i];
-                    return;
+                    Message.Raise(new InventoryChangeEvent());
+                    return true;
                 }
             }
+
+            Message.Raise(new InventoryChangeEvent());
+            return false;
         }
 
         public void RemoveItemFromInventory(int slotID, int usedAmount)
@@ -209,6 +226,57 @@ namespace farmingsim
             }
             slots[slotID].HoldedItemAmount = itemAmounts[slotID];
             slots[slotID].HoldedItem = items[slotID];
+            
+            Message.Raise(new InventoryChangeEvent());
+        }
+        
+        public void RemoveItemFromInventory(IItem itemType, int usedAmount)
+        {
+            int removedAmount = 0;
+            for (int i = 0; i < maxAccessibleSlots; i++)
+            {
+                if (removedAmount < usedAmount)
+                {
+                    if (items[i] == itemType)
+                    {
+                        if (itemAmounts[i] - (usedAmount - removedAmount) <= 0)
+                        {
+                            removedAmount += itemAmounts[i];
+                            items[i] = null;
+                            itemAmounts[i] = 0;
+                            slots[i].HoldedItemAmount = itemAmounts[i];
+                            slots[i].HoldedItem = items[i];
+                        }
+                        else
+                        {
+                            int oldRemovedAmount = removedAmount;
+                            removedAmount += (itemAmounts[i] - removedAmount);
+                            itemAmounts[i] -= (usedAmount - oldRemovedAmount);
+                            slots[i].HoldedItemAmount = itemAmounts[i];
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+            
+            Message.Raise(new InventoryChangeEvent());
+        }
+
+        public int GetAmountOfItemInInventory(IItem item)
+        {
+            
+            int amount = 0;
+            for(int i = 0; i < maxAccessibleSlots; i++)
+            {
+                if (items[i] != null && items[i] == item)
+                {
+                    amount += ItemAmounts[i];
+                }
+            }
+            return amount;
         }
     }
 }

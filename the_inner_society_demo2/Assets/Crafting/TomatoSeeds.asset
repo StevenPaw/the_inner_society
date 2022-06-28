@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80ffe947eb449a0926c9673a2040c8e, type: 3}
   m_Name: TomatoSeeds
   m_EditorClassIdentifier: 
+  craftingRecipeName: Tomato Seeds
   ingredients:
   - item: {fileID: 11400000, guid: 734b80951aacbcc47ba6d8b26e335018, type: 2}
     amount: 1

@@ -1,5 +1,5 @@
-﻿using System;
-using DG.Tweening;
+﻿using DG.Tweening;
+using farmingsim.EventSystem;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,36 +44,19 @@ namespace farmingsim
             set => playerController = value;
         }
 
+        private void OnEnable()
+        {
+            Message<InventoryChangeEvent>.Add(OnInventoryChangeEvent);
+        }
+
+        private void OnDisable()
+        {
+            Message<InventoryChangeEvent>.Remove(OnInventoryChangeEvent);
+        }
+
         private void Start()
         {
             playerController = PlayerController.Instance;
-        }
-
-        private void Update()
-        {
-            if (holdedItem != null)
-            {
-                itemImage.sprite = holdedItem.GetInventoryIcon();
-                itemAmountText.text = holdedItemAmount.ToString();
-            }
-            else
-            {
-                itemImage.sprite = freeSlotImage;
-            }
-
-            if (Inventory.Instance.CurrentlyActiveSlot == slotID)
-            {
-                activeIndicator.SetActive(true);
-            }
-            else
-            {
-                activeIndicator.SetActive(false);
-            }
-
-            if (holdedItemAmount <= 0 || holdedItem == null)
-            {
-                itemAmountText.text = "";
-            }
         }
 
         public void OnButtonRightPress()
@@ -122,6 +105,8 @@ namespace farmingsim
                 Inventory.Instance.Items[slotID] = holdedItem;
                 Inventory.Instance.ItemAmounts[slotID] = holdedItemAmount;
             }
+            
+            Message.Raise(new InventoryChangeEvent());
         }
 
         public void OnButtonLeftPress()
@@ -170,6 +155,8 @@ namespace farmingsim
                 Inventory.Instance.Items[slotID] = holdedItem;
                 Inventory.Instance.ItemAmounts[slotID] = holdedItemAmount;
             }
+            
+            Message.Raise(new InventoryChangeEvent());
         }
 
         public void OnButtonEnter()
@@ -193,6 +180,33 @@ namespace farmingsim
                 {
                     itemImage.sprite = freeSlotImage;
                 }
+            }
+        }
+
+        private void OnInventoryChangeEvent(InventoryChangeEvent ctx)
+        {
+            if (holdedItem != null)
+            {
+                itemImage.sprite = holdedItem.GetInventoryIcon();
+                itemAmountText.text = holdedItemAmount.ToString();
+            }
+            else
+            {
+                itemImage.sprite = freeSlotImage;
+            }
+
+            if (Inventory.Instance.CurrentlyActiveSlot == slotID)
+            {
+                activeIndicator.SetActive(true);
+            }
+            else
+            {
+                activeIndicator.SetActive(false);
+            }
+
+            if (holdedItemAmount <= 0 || holdedItem == null)
+            {
+                itemAmountText.text = "";
             }
         }
     }

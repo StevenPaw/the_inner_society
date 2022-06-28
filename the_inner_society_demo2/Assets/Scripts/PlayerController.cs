@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using farmingsim;
+using farmingsim.EventSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rbody = playerObject.GetComponent<Rigidbody2D>();
+        Message.Raise(new ToggleInventoryEvent());
     }
 
     void FixedUpdate()
@@ -80,7 +82,7 @@ public class PlayerController : MonoBehaviour
                     if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is IPlantable)
                     {
                         FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
-                        if (plantable.IsReady)
+                        if (plantable.IsReady && plantable.IsFree)
                         {
                             plantable.SetPlantedPlant(
                                 Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
@@ -156,6 +158,7 @@ public class PlayerController : MonoBehaviour
         if (ctx.started)
         {
             GameManager.Instance.InInventory = !GameManager.Instance.InInventory;
+            Message.Raise(new ToggleInventoryEvent());
         }
     }
 

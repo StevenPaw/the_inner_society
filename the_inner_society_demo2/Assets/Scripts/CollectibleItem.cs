@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using farmingsim.EventSystem;
 using farmingsim.Utils;
 using UnityEngine;
 
@@ -37,8 +38,10 @@ namespace farmingsim
         {
             if (col.gameObject.CompareTag(GameTags.PLAYER))
             {
-                Inventory.Instance.AddItemToInventory(item as IItem, itemAmount);
-                Destroy(this.gameObject);
+                if (Inventory.Instance.AddItemToInventory(item, itemAmount))
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
