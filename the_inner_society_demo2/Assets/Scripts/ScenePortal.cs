@@ -31,7 +31,6 @@ public class ScenePortal : MonoBehaviour
         playerControllerRB.GetComponent<Collider2D>().enabled = true;
         playerControllerRB.isKinematic = false;
         
-        
         SceneManager.LoadScene(SceneToTeleportTo);
     }
 }
