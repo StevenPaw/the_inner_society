@@ -2,6 +2,7 @@
 using DG.Tweening;
 using farmingsim.EventSystem;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace farmingsim
 {
@@ -15,6 +16,7 @@ namespace farmingsim
         [SerializeField] private Transform slotsHolderHotbar;
         [SerializeField] private GameObject itemSlotPrefab;
         [SerializeField] private ItemSlot[] slots;
+        [SerializeField] private Image inventoryBackdrop;
         private static Inventory instance;
         
         private List<IItem> items;
@@ -151,10 +153,12 @@ namespace farmingsim
             if (GameManager.Instance.InInventory)
             {
                 slotsHolderInventory.gameObject.SetActive(true);
+                inventoryBackdrop.DOFade(0.8f, 0.5f);
             }
             else
             {
                 slotsHolderInventory.gameObject.SetActive(false);
+                inventoryBackdrop.DOFade(0f, 0.5f);
             }
         }
 

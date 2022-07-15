@@ -73,26 +73,29 @@ public class PlayerController : MonoBehaviour
 
     public void OnBuildAction(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (!GameManager.Instance.InInventory)
         {
-            if (GameManager.Instance.ActiveUseObject != null && Inventory.Instance.Items != null)
+            if (ctx.started)
             {
-                if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
+                if (GameManager.Instance.ActiveUseObject != null && Inventory.Instance.Items != null)
                 {
-                    if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is IPlantable)
+                    if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
                     {
-                        FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
-                        if (plantable.IsReady && plantable.IsFree)
+                        if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is IPlantable)
                         {
-                            plantable.SetPlantedPlant(
-                                Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
-                            Inventory.Instance.RemoveItemFromInventory(Inventory.Instance.CurrentlyActiveSlot, 1);
+                            FieldTile plantable = (FieldTile) GameManager.Instance.ActiveUseObject;
+                            if (plantable.IsReady && plantable.IsFree)
+                            {
+                                plantable.SetPlantedPlant(
+                                    Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as IPlantable);
+                                Inventory.Instance.RemoveItemFromInventory(Inventory.Instance.CurrentlyActiveSlot, 1);
+                            }
                         }
-                    } 
-                    else if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is ITool)
-                    {
-                        ITool tool = Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as ITool;
-                        tool.Use(GameManager.Instance.ActiveUseObject);
+                        else if (Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] is ITool)
+                        {
+                            ITool tool = Inventory.Instance.Items[Inventory.Instance.CurrentlyActiveSlot] as ITool;
+                            tool.Use(GameManager.Instance.ActiveUseObject);
+                        }
                     }
                 }
             }
@@ -101,34 +104,37 @@ public class PlayerController : MonoBehaviour
 
     public void OnDestroyAction(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (!GameManager.Instance.InInventory)
         {
-            if (GameManager.Instance.ActiveUseObject != null)
+            if (ctx.started)
             {
-                if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
+                if (GameManager.Instance.ActiveUseObject != null)
                 {
-                    FieldTile fieldTile = (FieldTile) GameManager.Instance.ActiveUseObject;
-                    if (!fieldTile.IsFree)
+                    if (GameManager.Instance.ActiveUseObject.GetUsableType() == UsableTypes.FARMFIELD)
                     {
-                        if (fieldTile.CanBeHarvested)
+                        FieldTile fieldTile = (FieldTile) GameManager.Instance.ActiveUseObject;
+                        if (!fieldTile.IsFree)
                         {
-                            IItem[] collectedItems = fieldTile.HarvestPlantedPlant();
-                            if (collectedItems != null)
+                            if (fieldTile.CanBeHarvested)
                             {
-                                foreach (IItem item in collectedItems)
+                                IItem[] collectedItems = fieldTile.HarvestPlantedPlant();
+                                if (collectedItems != null)
                                 {
-                                    Inventory.Instance.AddItemToInventory(item, 1);
+                                    foreach (IItem item in collectedItems)
+                                    {
+                                        Inventory.Instance.AddItemToInventory(item, 1);
+                                    }
                                 }
                             }
-                        }
-                        else
-                        {
-                            IItem[] collectedItems = fieldTile.DestroyPlantedPlant();
-                            if (collectedItems != null)
+                            else
                             {
-                                foreach (IItem item in collectedItems)
+                                IItem[] collectedItems = fieldTile.DestroyPlantedPlant();
+                                if (collectedItems != null)
                                 {
-                                    Inventory.Instance.AddItemToInventory(item, 1);
+                                    foreach (IItem item in collectedItems)
+                                    {
+                                        Inventory.Instance.AddItemToInventory(item, 1);
+                                    }
                                 }
                             }
                         }
@@ -145,11 +151,14 @@ public class PlayerController : MonoBehaviour
 
     public void OnScroll(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (!GameManager.Instance.InInventory)
         {
-            float scrollDirection = 0;
-            scrollDirection += ctx.ReadValue<Vector2>().normalized.y;
-            Inventory.Instance.ChangeActiveSlot((int) scrollDirection);
+            if (ctx.started)
+            {
+                float scrollDirection = 0;
+                scrollDirection += ctx.ReadValue<Vector2>().normalized.y;
+                Inventory.Instance.ChangeActiveSlot((int) scrollDirection);
+            }
         }
     }
 

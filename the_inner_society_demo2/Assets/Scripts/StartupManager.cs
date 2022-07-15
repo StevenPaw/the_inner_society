@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using farmingsim;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,10 @@ public class StartupManager : MonoBehaviour
 {
     [SerializeField] private string firstSceneToLoad;
     [SerializeField] private float loadDelay;
+    [SerializeField] private string farmScene;
+    [SerializeField] private string settlementScene;
+    [SerializeField] private string natureScene;
+    [SerializeField] private string cityScene;
 
     private void Start()
     {
@@ -16,6 +21,8 @@ public class StartupManager : MonoBehaviour
         {
             firstSceneToLoad = lastScene;
         }
+        
+        
 
         StartCoroutine(LoadFirstScene());
     }
