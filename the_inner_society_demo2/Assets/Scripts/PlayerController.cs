@@ -168,6 +168,7 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.InInventory = !GameManager.Instance.InInventory;
             Message.Raise(new ToggleInventoryEvent());
+            DayNightCycleManager.Instance.DoesDayNightCycle = !GameManager.Instance.InInventory;
         }
     }
 
